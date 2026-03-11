@@ -1,0 +1,4 @@
+interface:
+  display_name: "AGENTS.md Context Manager"
+  short_description: "Persist AGENTS.md and normalize task/design knowledge context"
+  default_prompt: "Use $agents-md-context-manager to create or update AGENTS.md, normalize design docs into knowledge/project/design, and scaffold task/knowledge context files for this repository."

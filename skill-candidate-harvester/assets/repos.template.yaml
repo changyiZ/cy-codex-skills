@@ -1,0 +1,10 @@
+version: 1
+updated_at: "YYYY-MM-DD"
+defaults:
+  cadence_days: 7
+repos:
+  - id: "repo-name"
+    path: "/abs/path/to/repo"
+    active: true
+    cadence_days: 7
+    notes: "Tracked by the durable-knowledge weekly review."

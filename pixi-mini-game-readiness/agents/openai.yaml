@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pixi Mini-Game Readiness"
+  short_description: "Audit PixiJS for future mini-game targets"
+  default_prompt: "Use $pixi-mini-game-readiness to audit this PixiJS project for Web-to-mini-game migration risks and define the no-regression rules before implementation."

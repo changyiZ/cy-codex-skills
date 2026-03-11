@@ -1,0 +1,10 @@
+interface:
+  display_name: "Spec Workflow"
+  short_description: "Structure complex work into spec, plan, and task flows."
+  icon_small: "./assets/spec-workflow-small.svg"
+  icon_large: "./assets/spec-workflow.svg"
+  brand_color: "#0F766E"
+  default_prompt: "Use $spec-workflow to turn this request into a tracked spec, plan, and execution workflow."
+
+policy:
+  allow_implicit_invocation: false

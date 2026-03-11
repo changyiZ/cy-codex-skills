@@ -1,0 +1,11 @@
+interface:
+  display_name: "Godot Core"
+  short_description: "Plan-first Godot core workflows and quality gates"
+  default_prompt: "Use $godot-core to implement and refactor Godot features with plan-first execution and strict validation gates."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "openaiDeveloperDocs"
+      description: "OpenAI developer docs MCP (read-only)"
+      transport: "streamable_http"
+      url: "https://developers.openai.com/mcp"

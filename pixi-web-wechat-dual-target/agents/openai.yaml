@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pixi Web WeChat Dual Target"
+  short_description: "Keep Web and WeChat Pixi targets aligned"
+  default_prompt: "Use $pixi-web-wechat-dual-target to keep this PixiJS Web change safe for the Web and WeChat mini-game targets."

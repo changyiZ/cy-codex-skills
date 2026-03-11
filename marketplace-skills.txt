@@ -1,0 +1,7 @@
+# Reinstall these from the Codex skills marketplace on a new machine.
+# They are intentionally not stored in this repository.
+
+develop-web-game
+playwright
+playwright-interactive
+screenshot

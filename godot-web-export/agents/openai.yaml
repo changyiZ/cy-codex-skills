@@ -1,0 +1,11 @@
+interface:
+  display_name: "Godot Web Export"
+  short_description: "Godot Web export, deployment, and runtime diagnostics"
+  default_prompt: "Use $godot-web-export to export, deploy, and troubleshoot Godot Web builds with a threads-safe decision process."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "openaiDeveloperDocs"
+      description: "OpenAI developer docs MCP (read-only)"
+      transport: "streamable_http"
+      url: "https://developers.openai.com/mcp"

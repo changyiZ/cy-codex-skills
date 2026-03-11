@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Spec Workflow logo</title>
+  <desc id="desc">A structured document with planning and execution branches.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECFEFF"/>
+      <stop offset="100%" stop-color="#CCFBF1"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="44" fill="url(#bg)"/>
+  <rect x="40" y="32" width="120" height="176" rx="18" fill="#FFFFFF" stroke="#0F766E" stroke-width="10"/>
+  <path d="M68 72H132" stroke="#0F766E" stroke-width="10" stroke-linecap="round"/>
+  <path d="M68 98H132" stroke="#0F766E" stroke-width="10" stroke-linecap="round"/>
+  <path d="M68 124H118" stroke="#0F766E" stroke-width="10" stroke-linecap="round"/>
+  <path d="M68 150H106" stroke="#0F766E" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="190" cy="74" r="16" fill="#0F766E"/>
+  <circle cx="206" cy="128" r="18" fill="#14B8A6"/>
+  <circle cx="182" cy="184" r="15" fill="#0F766E"/>
+  <path d="M160 74H174" stroke="#14B8A6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M160 128H184" stroke="#14B8A6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M160 184H167" stroke="#14B8A6" stroke-width="8" stroke-linecap="round"/>
+  <path d="M190 90V108" stroke="#0F766E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M198 146L188 168" stroke="#0F766E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M196 78L204 114" stroke="#0F766E" stroke-width="8" stroke-linecap="round"/>
+</svg>

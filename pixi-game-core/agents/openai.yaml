@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pixi Game Core"
+  short_description: "PixiJS game architecture and quality gates"
+  default_prompt: "Use $pixi-game-core to build or refactor a PixiJS v8 game with clear architecture, asset, input, and quality rules."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Asset Image Processor"
+  short_description: "Convert AI images into game-ready transparent assets"
+  default_prompt: "Convert generated images into game-ready assets: remove plain background, clean corner watermark/logo, and export target-size PNG with transparent padding."

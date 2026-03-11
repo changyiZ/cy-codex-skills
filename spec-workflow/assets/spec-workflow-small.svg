@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Spec Workflow icon</title>
+  <desc id="desc">A document and connected workflow nodes.</desc>
+  <rect width="64" height="64" rx="16" fill="#E6FFFB"/>
+  <rect x="14" y="10" width="28" height="40" rx="6" fill="#FFFFFF" stroke="#0F766E" stroke-width="3"/>
+  <path d="M22 20H34" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 28H34" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M22 36H30" stroke="#0F766E" stroke-width="3" stroke-linecap="round"/>
+  <path d="M42 22H49" stroke="#14B8A6" stroke-width="3" stroke-linecap="round"/>
+  <path d="M42 32H49" stroke="#14B8A6" stroke-width="3" stroke-linecap="round"/>
+  <path d="M42 42H49" stroke="#14B8A6" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="52" cy="22" r="4" fill="#0F766E"/>
+  <circle cx="52" cy="32" r="4" fill="#14B8A6"/>
+  <circle cx="52" cy="42" r="4" fill="#0F766E"/>
+</svg>

@@ -1,0 +1,23 @@
+version: 1
+name: "candidate-name"
+status: "candidate"
+problem_statement: ""
+when_to_use: ""
+inputs: []
+outputs: []
+stable_steps: []
+failure_modes: []
+validation: []
+source_repos: []
+source_tasks: []
+evidence:
+  repeated_tasks: 0
+  repeated_repos: 0
+  has_stable_io: false
+  has_checklist_or_playbook: false
+  has_pitfalls: false
+  manually_marked_reusable: false
+first_observed_at: "YYYY-MM-DD"
+last_reviewed_at: "YYYY-MM-DD"
+next_review_at: "YYYY-MM-DD"
+notes: ""

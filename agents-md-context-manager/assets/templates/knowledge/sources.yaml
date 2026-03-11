@@ -1,0 +1,58 @@
+version: 1
+updated_at: "<YYYY-MM-DD>"
+
+defaults:
+  update_cycle_days: 7
+  timezone: "UTC"
+
+sources:
+  - id: example-authoritative-doc
+    title: "Example Authoritative Doc"
+    type: authoritative
+    scope: core-domain
+    url: "https://example.com/spec"
+    owner: "Standards Body"
+    license: "public"
+    local_path: "knowledge/authoritative/example-authoritative-doc.html"
+    downloaded_at: null
+    last_checked_at: null
+    next_review_at: null
+    update_cycle_days: 7
+    review_kind: both
+    watch_paths: []
+    status: active
+    notes: "Replace with real source."
+
+  - id: example-project-knowledge
+    title: "Example Project Glossary"
+    type: project
+    scope: business-domain
+    url: "internal://wiki/project-glossary"
+    owner: "Product Team"
+    license: "internal"
+    local_path: "knowledge/project/glossary.md"
+    downloaded_at: null
+    last_checked_at: null
+    next_review_at: null
+    update_cycle_days: 7
+    review_kind: both
+    watch_paths: []
+    status: active
+    notes: "Replace with real project knowledge."
+
+  - id: example-product-design-doc
+    title: "Example Product Design Doc"
+    type: project
+    scope: product-design
+    url: "file://docs/PRD.md"
+    owner: "Product Team"
+    license: "internal"
+    local_path: "knowledge/project/design/prd.md"
+    downloaded_at: null
+    last_checked_at: null
+    next_review_at: null
+    update_cycle_days: 7
+    review_kind: both
+    watch_paths: []
+    status: active
+    notes: "Record original location and whether moved or copied during normalization."

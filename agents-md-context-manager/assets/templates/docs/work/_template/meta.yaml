@@ -1,0 +1,14 @@
+task_id: "<task-id>"
+title: "<task-title>"
+status: "in_progress"
+owner: "<owner>"
+issue_url: ""
+branch: ""
+created_at: "<YYYY-MM-DD>"
+updated_at: "<YYYY-MM-DD>"
+knowledge_review_status: "pending"
+knowledge_reviewed_at: null
+knowledge_targets: []
+knowledge_followups: []
+skill_candidates: []
+related_knowledge: []

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Playwright Codex"
+  short_description: "Codex-native Playwright CLI workflow"
+  default_prompt: "Use $playwright-codex to configure or run Playwright in Codex with a CLI-first workflow and MCP fallback."
+
+policy:
+  allow_implicit_invocation: false

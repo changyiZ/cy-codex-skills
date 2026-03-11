@@ -1,0 +1,10 @@
+version: 1
+updated_at: "2026-03-09"
+defaults:
+  cadence_days: 7
+repos:
+  - id: "yinling-layout-pixi"
+    path: "/Users/cY/dev/games/game0307"
+    active: true
+    cadence_days: 7
+    notes: "First tracked repository for the durable knowledge loop rollout."
