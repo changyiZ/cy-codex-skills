@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "skill": "pixi-wechat-minigame-adapter",
+  "compatibility": {
+    "pixi": "v8",
+    "language": "TypeScript",
+    "bundler": "Vite"
+  },
+  "modes": {
+    "overlay": {
+      "templateDir": "assets/starter-template",
+      "files": [
+        "Makefile.fragment.mk",
+        "docs/wechat/smoke-checklist.md",
+        "docs/wechat/verification-matrix.md",
+        "package.scripts.fragment.json",
+        "src/platform/WeChatPlatform.ts",
+        "src/platform/prepareWeChatRuntime.ts",
+        "src/platform/wechat-env.d.ts",
+        "src/platform/wechat-modules.d.ts",
+        "src/platform/wechatDebug.ts",
+        "src/platform/wechatStartupTrace.ts",
+        "src/platform/wechatWebGLCompat.ts",
+        "src/vite-env.d.ts",
+        "src/wechat-main.ts",
+        "tests/audit-wechat-build.test.ts",
+        "tests/build-wechat.test.ts",
+        "tests/wechat-debug-log.test.ts",
+        "tests/wechat-main.test.ts",
+        "tests/wechat-platform.test.ts",
+        "tests/wechat-runtime-prep.test.ts",
+        "tests/wechat-startup-trace.test.ts",
+        "tests/wechat-webgl-compat.test.ts",
+        "tools/audit-wechat-build.mjs",
+        "tools/build-wechat.mjs",
+        "vite.wechat.config.ts"
+      ]
+    },
+    "skeleton": {
+      "templateDir": "assets/skeleton-template",
+      "files": [
+        ".gitignore",
+        "Makefile",
+        "README.md",
+        "docs/wechat/smoke-checklist.md",
+        "docs/wechat/verification-matrix.md",
+        "eslint.config.js",
+        "index.html",
+        "package.json",
+        "src/boot/GameCoordinator.ts",
+        "src/boot/bootstrap.ts",
+        "src/boot/config.ts",
+        "src/main.ts",
+        "src/platform/WeChatPlatform.ts",
+        "src/platform/browserPlatform.ts",
+        "src/platform/prepareWeChatRuntime.ts",
+        "src/platform/wechat-env.d.ts",
+        "src/platform/wechat-modules.d.ts",
+        "src/platform/wechatDebug.ts",
+        "src/platform/wechatStartupTrace.ts",
+        "src/platform/wechatWebGLCompat.ts",
+        "src/scenes/StarterScene.ts",
+        "src/shared/config/gameConfig.ts",
+        "src/shared/contracts.ts",
+        "src/ui/README.md",
+        "src/vite-env.d.ts",
+        "src/wechat-main.ts",
+        "tests/audit-wechat-build.test.ts",
+        "tests/build-wechat.test.ts",
+        "tests/wechat-debug-log.test.ts",
+        "tests/wechat-main.test.ts",
+        "tests/wechat-platform.test.ts",
+        "tests/wechat-runtime-prep.test.ts",
+        "tests/wechat-startup-trace.test.ts",
+        "tests/wechat-webgl-compat.test.ts",
+        "tools/audit-wechat-build.mjs",
+        "tools/build-wechat.mjs",
+        "tsconfig.json",
+        "vite.config.ts",
+        "vite.wechat.config.ts"
+      ]
+    }
+  },
+  "textModules": {
+    "none": {
+      "templateDir": null,
+      "files": []
+    },
+    "fixed-copy-glyph": {
+      "templateDir": "assets/text-modules/fixed-copy-glyph",
+      "files": [
+        "Makefile.fragment.mk",
+        "docs/wechat/fixed-copy-glyph.md",
+        "package.scripts.fragment.json",
+        "src/ui/fixedCopyGlyph/README.md",
+        "src/ui/fixedCopyGlyph/strings.json",
+        "tests/fixed-copy-glyph-module.test.ts",
+        "tools/build-copy-glyph-atlas.py"
+      ]
+    }
+  }
+}

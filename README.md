@@ -1,10 +1,12 @@
 # cy-codex-skills
 
-Backup of selected non-system Codex skills that should be synchronized across devices.
+Mirror of the non-system Codex skills currently loaded from `~/.codex/skills` and synchronized across devices.
 
 ## Synced skills
 
 - `agents-md-context-manager`
+- `agent-reach`
+- `develop-web-game`
 - `durable-knowledge-maintainer`
 - `game-image-asset-pipeline`
 - `godot-core`
@@ -13,8 +15,13 @@ Backup of selected non-system Codex skills that should be synchronized across de
 - `pixi-game-core`
 - `pixi-mini-game-readiness`
 - `pixi-web-wechat-dual-target`
+- `pixi-wechat-black-screen`
 - `pixi-wechat-minigame-adapter`
+- `playwright`
 - `playwright-codex`
+- `playwright-interactive`
+- `screenshot`
+- `self-improving-codex`
 - `skill-candidate-harvester`
 - `spec-workflow`
 - `uninstall-claude-code`
@@ -23,6 +30,6 @@ Backup of selected non-system Codex skills that should be synchronized across de
 
 Clone this repo, then copy or symlink each skill directory into `~/.codex/skills/`, and restart Codex.
 
-## Marketplace-only skills
+## Excluded skills
 
-See `marketplace-skills.txt` for skills that should be reinstalled from the Codex skills marketplace instead of being synced here.
+See `marketplace-skills.txt` for the skills intentionally excluded from this repository.

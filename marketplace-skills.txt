@@ -1,7 +1,6 @@
-# Reinstall these from the Codex skills marketplace on a new machine.
-# They are intentionally not stored in this repository.
+# These skills are intentionally excluded from this repository.
+# They are provided by Codex itself and should be restored with the Codex installation.
 
-develop-web-game
-playwright
-playwright-interactive
-screenshot
+.system/openai-docs
+.system/skill-creator
+.system/skill-installer

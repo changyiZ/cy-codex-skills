@@ -8,6 +8,10 @@ outputs: []
 stable_steps: []
 failure_modes: []
 validation: []
+pattern_keys: []
+trigger_types: []
+source_entries: []
+recurrence_count: 0
 source_repos: []
 source_tasks: []
 evidence:

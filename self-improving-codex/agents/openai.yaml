@@ -1,0 +1,4 @@
+interface:
+  display_name: "Self-Improving Codex"
+  short_description: "Capture task-time learnings and triage safe promotions"
+  default_prompt: "Use $self-improving-codex to capture task-time learnings in the active task's learning-log, keep status summaries aligned, and safely promote durable patterns into knowledge docs or skill candidates."

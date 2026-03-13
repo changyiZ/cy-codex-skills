@@ -1,0 +1,1 @@
+Keep fixed-copy UI strings in `strings.json`. The generation scaffold writes a manifest file under `public/assets/text/` so downstream tooling can build or verify a deterministic glyph atlas pipeline.

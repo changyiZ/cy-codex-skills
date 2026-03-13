@@ -33,8 +33,10 @@ Use short rounds (max 3 questions each).
 5. Keep reusable knowledge in `knowledge/`.
 6. If `.current` exists, update that task context first; avoid creating duplicate TODO folders.
 7. Normalize product design docs into `knowledge/project/design/` and keep source registry in sync.
-8. Before closing any task, make the durable-knowledge outcome explicit in task metadata.
-9. If a workflow repeats and already has stable validation, record it as a skill candidate instead of leaving it only in prose.
+8. Create `docs/work/<task>/learning-log.md` and capture non-trivial errors, corrections, conventions, and repeated workflows there instead of burying them in chat.
+9. Keep `status.md` focused on derived summaries via `Learning Capture` and `Promotion Queue`; raw event detail belongs in `learning-log.md`.
+10. Before closing any task, make the durable-knowledge outcome explicit in task metadata and ensure relevant learning entries are no longer `pending`.
+11. If a workflow repeats and already has stable validation, record it as a skill candidate instead of leaving it only in prose.
 
 ## Validation Checklist
 
@@ -42,9 +44,10 @@ Use short rounds (max 3 questions each).
 2. `AGENTS.md` has required sections and project-specific rules.
 3. `AGENTS.md` references product design source path (canonical).
 4. `docs/work/.current` exists and points to a real task folder.
-5. Task folder includes `meta.yaml`, `spec.md`, `status.md`, `decisions.md`.
+5. Task folder includes `meta.yaml`, `spec.md`, `status.md`, `decisions.md`, and `learning-log.md`.
 6. `knowledge/project/design/` exists and contains canonical design doc (or explicit TODO).
 7. `knowledge/sources.yaml` contains source metadata and review cadence, including design docs.
 8. `knowledge/index.md` and `knowledge/changelog.md` are present.
 9. Task metadata includes `knowledge_review_status`, `knowledge_targets`, `knowledge_followups`, and `skill_candidates`.
-10. No contradictory instructions across AGENTS and templates.
+10. `status.md` contains `Learning Capture` and `Promotion Queue`, and `AGENTS.md` contains `Self-Improvement Protocol`.
+11. No contradictory instructions across AGENTS and templates.

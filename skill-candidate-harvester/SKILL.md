@@ -21,6 +21,7 @@ Use this skill when repeated workflows need to move beyond task-local notes and 
    - `AGENTS.md`
    - `docs/work/.current`
    - recent task `meta.yaml` files
+   - recent task `learning-log.md` files
    - recent task `status.md` files, especially `Potential Skills`
    - `knowledge/changelog.md`
    - relevant pitfalls, checklist, or verification docs when evidence needs confirmation
@@ -29,15 +30,17 @@ Use this skill when repeated workflows need to move beyond task-local notes and 
 1. Load the tracked repo list.
    - use `assets/repos.template.yaml` only as a seed, not as the live registry
 2. Collect candidate evidence.
+   - triaged or promoted entries from `learning-log.md`
    - explicit `skill_candidates` from task metadata
    - `Potential Skills` sections in task status files
    - repeated durable findings in changelogs, pitfalls, or checklists
 3. Merge by workflow identity.
-   - prefer a stable skill-style name
+   - prefer a stable `pattern_key` first when present
+   - otherwise merge by stable skill-style name plus normalized summary similarity
    - merge evidence instead of creating near-duplicates
 4. Update or create candidate records under `$CODEX_HOME/memories/durable-knowledge/skill-candidates/`.
    - use `assets/skill-candidate.template.yaml`
-   - keep `source_repos`, `source_tasks`, validation, and failure modes current
+   - keep `pattern_keys`, `trigger_types`, `source_entries`, `recurrence_count`, `source_repos`, `source_tasks`, validation, and failure modes current
 5. Decide whether a draft should be created.
    - require at least two independent tasks or two repositories of evidence
    - require at least one validation path

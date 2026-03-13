@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build:copy-glyph-atlas": "python3 tools/build-copy-glyph-atlas.py"
+  }
+}

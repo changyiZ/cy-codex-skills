@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pixi WeChat Mini-Game Standard Solution"
+  short_description: "Install the canonical PixiJS WeChat mini-game solution"
+  default_prompt: "Use $pixi-wechat-minigame-adapter to install or standardize the canonical WeChat mini-game solution for this PixiJS v8 + TypeScript + Vite project."

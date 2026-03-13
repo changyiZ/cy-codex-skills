@@ -41,7 +41,7 @@
 ## Task linkage
 - Work directory: `docs/work/<task-id>-<feature>/`
 - Active pointer: `docs/work/.current`
-- Required files: `meta.yaml`, `spec.md`, `status.md`, `decisions.md`
+- Required files: `meta.yaml`, `spec.md`, `status.md`, `decisions.md`, `learning-log.md`
 - Resolve priority:
   1. user-provided task id/url
   2. `.current` pointer
@@ -57,6 +57,28 @@
 - Design docs (canonical): `knowledge/project/design/`
 - Review cadence: `7` days
 
+## Self-Improvement Protocol
+- Capture triggers:
+  - unexpected command, tool, or integration failure
+  - user correction or clarified requirement
+  - self-correction after discovering the earlier approach was wrong
+  - newly discovered repo convention or undocumented rule
+  - repeated workflow worth simplifying or reusing
+  - missing capability that blocked task progress
+- Capture surface:
+  - append raw task-time learnings to `docs/work/<task>/learning-log.md`
+  - each entry records `id`, `type`, `logged_at`, `status`, `trigger`, `summary`, `details`, `related_files`, `pattern_key`, `promotion_target`, and `see_also`
+  - keep only derived summaries in `status.md` under `Learning Capture` and `Promotion Queue`
+- Triage states:
+  - `pending`: captured but not yet confirmed
+  - `triaged`: confirmed and mapped to the right durable target
+  - `promoted`: durable docs or candidate records were actually updated
+  - `dismissed`: non-durable noise, superseded, or out of scope
+- Guardrails:
+  - raw learning entries must not update `AGENTS.md` directly
+  - only triaged or promoted learnings may change durable docs or skill-candidate records
+  - completed tasks must not leave relevant learning entries in `pending`
+
 ## Durable Knowledge Protocol
 - Trigger:
   - architecture, command, packaging, or validation changes
@@ -68,6 +90,7 @@
   - before marking a task complete, set `knowledge_review_status` in `docs/work/<task>/meta.yaml`
   - allowed values: `pending`, `not_needed`, `updated`, `followup_required`
   - if `followup_required`, record the missing updates in `knowledge_followups`
+  - review `learning-log.md` before closing the task and resolve relevant `pending` entries first
 - Update targets:
   - rules/policy changes -> `AGENTS.md`
   - implementation snapshot changes -> `knowledge/project/current-state.md`
@@ -82,6 +105,7 @@
 ## Update protocol
 - Trigger:
   - architecture or command changes
+  - self-improvement capture or triage workflow changes
   - repeated errors/pattern gaps
   - new or changed authoritative knowledge sources
   - new or changed durable verification conclusions
@@ -90,9 +114,9 @@
   - design docs added/moved/rewritten
 - Workflow:
   1. read existing AGENTS.md
-  2. review the active task metadata and durable-knowledge status first
+  2. review the active task metadata, `learning-log.md`, and durable-knowledge status first
   3. edit impacted sections only
-  4. update task linkage and knowledge metadata if needed
+  4. update task linkage, self-improvement, and knowledge metadata if needed
   5. append update log entry
 - Owner:
 

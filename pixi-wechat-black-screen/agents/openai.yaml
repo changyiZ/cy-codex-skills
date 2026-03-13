@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pixi WeChat Black Screen"
+  short_description: "Fix Pixi WeChat mini-game black screens"
+  default_prompt: "Use $pixi-wechat-black-screen to diagnose and fix a PixiJS WeChat mini-game black screen."

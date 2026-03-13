@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Reach"
+  short_description: "Install and use Agent Reach internet channels"
+  default_prompt: "Use $agent-reach to install, configure, or operate Agent Reach for platform-specific web access."

@@ -8,6 +8,12 @@
 - [ ] Major step 1
 - [ ] Major step 2
 
+## Learning Capture
+- Pending:
+  - none yet
+- Triaged or promoted:
+  - none yet
+
 ## Durable Findings
 - Durable conclusion 1
 
@@ -21,6 +27,12 @@
 ## Potential Skills
 - Candidate workflow:
   - why it might deserve a reusable skill
+
+## Promotion Queue
+- Repo-local durable updates:
+  - none yet
+- Global candidate or skill promotions:
+  - none yet
 
 ## Next
 1. Next step 1

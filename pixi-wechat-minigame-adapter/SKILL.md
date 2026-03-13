@@ -1,80 +1,85 @@
 ---
 name: pixi-wechat-minigame-adapter
-description: Bootstrap a new PixiJS + Vite + TypeScript game onto the reusable WeChat mini-game path using the starter template, living playbook, and verification matrix from the source repository.
+description: Canonical PixiJS v8 + TypeScript + Vite solution for adding or standardizing a WeChat mini-game target with reusable starter templates, install scripts, validation gates, and maintenance rules.
 ---
 
 # Pixi WeChat Mini-Game Adapter
 
-Use this skill when a PixiJS project does not yet have a WeChat mini-game target and needs to adopt the reusable adapter layer from `印灵排布`.
+Use this skill when a `PixiJS v8 + TypeScript + Vite` project needs a standard WeChat mini-game solution instead of ad hoc runtime shims.
 
-## Source of truth
-- Starter template:
-  - `/Users/cY/dev/games/game0307/templates/pixi-wechat-minigame/README.md`
-- Standard solution:
-  - `/Users/cY/dev/games/game0307/knowledge/project/pixi-wechat-minigame-standard-solution.md`
-- Pitfalls:
-  - `/Users/cY/dev/games/game0307/knowledge/project/pixi-wechat-minigame-pitfalls.md`
-- Bootstrap checklist:
-  - `/Users/cY/dev/games/game0307/knowledge/project/pixi-wechat-minigame-bootstrap-checklist.md`
-- Verification matrix:
-  - `/Users/cY/dev/games/game0307/knowledge/project/pixi-wechat-minigame-verification-matrix.md`
+This skill is the canonical source of truth for:
+1. the WeChat runtime contract
+2. the starter/template assets
+3. the install flow
+4. the validation matrix
+5. the maintenance loop for new failure modes
 
-## When to use
-Use this skill for:
-1. adding a WeChat mini-game target to a new Pixi project
-2. reusing the adapter-layer runtime fixes in another Pixi repo
-3. standardizing build, debug, release, and audit flows for WeChat packaging
-4. seeding a new project with the same evidence model for incomplete validation
+## Compatibility Envelope
 
-Do not use this skill for:
-1. existing dual-target maintenance when the target repo already has a healthy WeChat path
-2. cross-engine reuse
-3. publishing a generic npm package
+Strong guarantee applies only to:
+1. `PixiJS v8`
+2. `TypeScript`
+3. `Vite`
 
-For already-adapted dual-target repos, use the existing `pixi-web-wechat-dual-target` skill instead.
+Other stacks may still reuse the references, but they are migration work, not direct-template installs. Use `references/migration-guide.md` for those cases.
 
-## Workflow
-1. Preflight the target repo.
-   - confirm it is PixiJS + Vite + TypeScript
-   - confirm shared gameplay code can stay platform-neutral
-   - confirm there is a clean `src/platform/` boundary or create one first
-2. Copy the starter template.
-   - take the files from `/Users/cY/dev/games/game0307/templates/pixi-wechat-minigame/`
-   - keep the copied tests until equivalent coverage exists in the target repo
-3. Adapt only the documented integration points.
-   - bootstrap export path
-   - design size and viewport assumptions
-   - storage namespace
-   - asset manifest and glyph-atlas aliases
-   - `WX_MINIGAME_APPID`, `WX_MINIGAME_PROJECT_NAME`, `WX_MINIGAME_LIB_VERSION`
-4. Keep all WeChat fixes in the adapter layer.
-   - runtime prep belongs in `prepareWeChatRuntime.ts`
-   - WebGL normalization belongs in `wechatWebGLCompat.ts`
-   - lifecycle/storage/canvas ownership belongs in `WeChatPlatformBridge.ts`
-   - packaging rules belong in `vite.wechat.config.ts` and `tools/build-wechat.mjs`
-5. Run the minimum validation set.
-   - `build:web`
-   - `build:wechat`
-   - `build:wechat:debug`
-   - `audit:wechat`
-   - runtime-prep, WebGL compat, build, audit, and glyph-atlas tests
-6. Record the state honestly.
-   - copy the verification-matrix model into the target repo
-   - mark incomplete items as `partially_verified`, `pending_validation`, or `blocked_by_missing_device_or_tooling`
-7. Write back new knowledge.
-   - if a new runtime failure appears, add it to the target repo’s pitfalls doc
-   - if the standard path changed, update the target repo’s standard solution and starter copy
+## Modes
 
-## Hard rules
-1. Do not hardcode `gameContext` paths into shared runtime code.
-2. Do not patch gameplay hit testing to compensate for WeChat pointer bugs.
-3. Do not reintroduce `CanvasRenderer` fallback as the default submission path.
-4. Do not report missing device coverage as “verified”.
-5. Do not leave new runtime learnings only in task chat or ad hoc notes.
+The standard solution exposes exactly two install modes:
+1. `overlay`: add WeChat support to an existing PixiJS Web repo
+2. `skeleton`: create a fresh Web + WeChat starter repo
 
-## Deliverable checklist
-1. target repo builds Web and WeChat debug/release outputs
-2. target repo has a release audit command
-3. target repo has a verification matrix
-4. target repo has a pitfalls log for new failures
-5. target repo clearly states which rows are still unverified
+It also exposes two text-module modes:
+1. `none`: default
+2. `fixed-copy-glyph`: optional scaffold for packaged fixed-copy text workflows
+
+## Canonical Contract
+
+Every install from this skill must preserve these rules:
+1. `game.js` binds exactly one screen canvas before the runtime bundle loads.
+2. The screen canvas is published to standard global aliases and an internal screen-canvas key.
+3. All later `wx.createCanvas()` calls are offscreen-only.
+4. `prepareWeChatRuntime()` only prepares the environment and DOM shim; it never chooses or recreates the display canvas.
+5. `WeChatPlatform` only consumes the prebound screen canvas.
+6. DevTools native `document` is reused when present.
+7. Synthetic DOM uses an internal child store; it never assumes native `children` is an array.
+8. WeChat-specific logic stays in `game.js`, `platform/`, and build tooling.
+
+## Install Flow
+
+1. Read `references/install-modes.md` and choose `overlay` or `skeleton`.
+2. Run the installer:
+   - `python3 scripts/install_starter.py --mode overlay --text-module none --target-repo /path/to/repo`
+   - `python3 scripts/install_starter.py --mode skeleton --text-module none --target-repo /path/to/repo`
+3. If you need packaged fixed-copy text scaffolding, rerun with `--text-module fixed-copy-glyph`.
+4. Adapt only the seams listed in `references/install-modes.md`.
+5. Run the commands in `references/validation-matrix.md`.
+6. Execute the DevTools and device checks from `references/smoke-checklist.md`.
+7. If the game boots but stays black, load [$pixi-wechat-black-screen](/Users/cY/.codex/skills/pixi-wechat-black-screen/SKILL.md).
+8. After bootstrap lands, use [$pixi-web-wechat-dual-target](/Users/cY/.codex/skills/pixi-web-wechat-dual-target/SKILL.md) for ongoing work.
+
+## Required Deliverables
+
+An installation is only complete when the target repo has:
+1. a stable Web target and WeChat debug/release targets
+2. `make web`, `make wechat`, `make wechat-debug`, `make audit`, `make test`, `make lint`, and `make typecheck`
+3. a release audit step
+4. a smoke checklist for DevTools and device verification
+5. a clear record of any remaining `partial`, `pending`, or `blocked` validation
+
+## Maintenance Rule
+
+Fix canonical assets first, then sync the consuming repo. Do not treat a business repo as the starter-template source of truth.
+
+## Resource Map
+
+1. `references/architecture.md`: runtime layers, ownership rules, and adapter boundaries
+2. `references/install-modes.md`: overlay vs skeleton expectations and customization seams
+3. `references/validation-matrix.md`: required commands, evidence language, and acceptance gates
+4. `references/smoke-checklist.md`: DevTools and on-device smoke flows
+5. `references/troubleshooting.md`: black-screen, canvas, DOM, and text-related failure modes
+6. `references/maintenance.md`: source-of-truth and update workflow
+7. `references/migration-guide.md`: guidance for non-Vite or non-Pixi-standard repos
+8. `scripts/install_starter.py`: installs the canonical starter into a target repo
+9. `scripts/sync_starter_manifest.py`: regenerates the canonical asset manifest
+10. `scripts/validate_solution.py`: validates the skill assets and install flow

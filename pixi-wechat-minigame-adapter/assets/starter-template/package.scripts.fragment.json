@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build": "npm run build:web",
+    "build:web": "npm run typecheck && vite build",
+    "build:wechat": "npm run typecheck && WECHAT_BUILD_PROFILE=release VITE_WECHAT_DEBUG=0 vite build --config vite.wechat.config.ts && WECHAT_BUILD_PROFILE=release node tools/build-wechat.mjs",
+    "build:wechat:debug": "npm run typecheck && WECHAT_BUILD_PROFILE=debug VITE_WECHAT_DEBUG=1 vite build --config vite.wechat.config.ts && WECHAT_BUILD_PROFILE=debug node tools/build-wechat.mjs",
+    "audit:wechat": "node tools/audit-wechat-build.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "pixi.js": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "vitest": "^3.0.0"
+  }
+}
