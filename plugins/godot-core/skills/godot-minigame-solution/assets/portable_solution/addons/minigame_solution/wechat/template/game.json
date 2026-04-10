@@ -1,0 +1,14 @@
+{
+  "deviceOrientation": "portrait",
+  "iOSHighPerformance": true,
+  "iOSHighPerformance+": true,
+  "workers": "workers",
+  "displayMode": "desktop",
+  "subpackages": [
+    {
+      "name": "engine",
+      "root": "engine"
+    }
+  ],
+  "plugins": {}
+}

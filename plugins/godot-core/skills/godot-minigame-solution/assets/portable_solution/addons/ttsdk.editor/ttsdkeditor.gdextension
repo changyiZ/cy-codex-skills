@@ -1,0 +1,10 @@
+[configuration]
+entry_symbol = "ttsdkeditor_library_init"
+compatibility_minimum = "4.5"
+reloadable=true
+
+[libraries]
+windows.editor.x86_64 = "res://addons/ttsdk.editor/bin/ttsdkeditor.windows.editor.x86_64.dll"
+
+macos.editor = "res://addons/ttsdk.editor/bin/libttsdkeditor.macos.editor.dylib"
+linux.editor = "res://addons/ttsdk.editor/bin/libttsdkeditor.linux.editor.x86_64.so"

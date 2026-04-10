@@ -1,0 +1,16 @@
+id: game0226-web-cjk-subset-refresh
+skill: godot-web-cjk-font-fix
+workspace: /Users/cY/dev/godot/game0226
+mode: mutating
+summary: Refresh the packaged Web CJK subset font after copy or glyph changes and verify coverage plus payload constraints.
+prompt: Use godot-web-cjk-font-fix to refresh game0226's packaged Web CJK font subset after text changes, verify glyph coverage, keep payload size controlled, and validate the Web build.
+validation_commands:
+  - make subset-font
+  - make subset-font-verify
+  - make export-web
+  - make browser-smoke
+expected_surfaces:
+  - assets/fonts/NotoSansSC-ProjectSubset.woff2
+  - assets/fonts/glyphs_project_full.txt
+  - tools/font_subset.sh
+  - tools/font_subset_verify.py

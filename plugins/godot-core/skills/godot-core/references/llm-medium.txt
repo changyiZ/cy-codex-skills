@@ -1,0 +1,50 @@
+# Godot LLM Medium Context
+
+Use this file after `llm.txt` when the task needs implementation guidance, architecture defaults, or a compact best-practices refresher.
+
+## Default Source Policy
+
+1. Use official stable docs for supported API facts.
+2. Use the class reference or editor-integrated class reference for exact API names and signatures.
+3. Use latest docs only when the task explicitly targets unreleased behavior or when stable docs are missing a recent change.
+4. Use local engineering references only after the official docs path is clear.
+
+## Scene and Script Boundaries
+
+1. Keep one responsibility per scene root.
+2. Keep public script APIs typed when using GDScript.
+3. Prefer reusable child nodes or focused scripts over scene-root sprawl.
+4. Keep serialization-sensitive resources and scenes stable unless the change requires a migration.
+
+## Events and Global State
+
+1. Use signals first for decoupled events.
+2. Use groups for one-to-many broadcast when signal wiring would become noisy.
+3. Use autoload only for focused global services, not as a catch-all feature dump.
+4. Avoid brittle cross-tree traversal such as deep `get_node()` chains for core logic.
+
+## Update Loop Intent
+
+1. Use `_physics_process` for deterministic simulation and motion.
+2. Use `_process` for visual updates and non-deterministic per-frame work.
+3. Keep `_input` or `_unhandled_input` focused on input capture and dispatch instead of full gameplay ownership.
+4. Validate process and input assumptions against the official scripting docs when behavior is timing-sensitive.
+
+## Resources, Assets, and Export Safety
+
+1. Keep resource-loading rules and path policy out of gameplay logic when possible.
+2. Avoid repeated hot-loop `load()` calls; cache or preload where appropriate.
+3. Keep export assumptions explicit and check the official export docs before changing preset behavior.
+4. Treat Web export constraints as a specialized workflow, not a generic gameplay concern.
+
+## Escalation Rules
+
+1. Use `$godot-web-export` when the primary issue is export presets, browser runtime behavior, headers, MIME types, caching, or Web deployment.
+2. Keep mini-game-specific product constraints explicit in project docs and `AGENTS.md`; they are not a validated standalone plugin skill in v0.1.
+3. Stay in `$godot-core` for general gameplay implementation, bug fixes, refactors, and performance diagnosis that are not primarily Web-specific.
+
+## Validation Defaults
+
+1. After behavior changes, use the repository formatter, linter, and tests or smoke flow in that order.
+2. State the exact commands run and any missing quality gates in the handoff.
+3. Use local references such as `50-testing.md`, `60-decoupling.md`, and `workflows.md` for delivery details after the API path is chosen.

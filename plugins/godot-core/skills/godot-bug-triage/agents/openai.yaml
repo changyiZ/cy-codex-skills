@@ -1,0 +1,4 @@
+interface:
+  display_name: "Godot Bug Triage"
+  short_description: "Minimal-fix diagnosis for Godot failures and regressions"
+  default_prompt: "Use $godot-bug-triage to isolate a Godot failure or refactor-caused regression, explain the root cause, and propose the smallest defensible fix."

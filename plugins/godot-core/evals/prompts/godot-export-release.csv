@@ -1,0 +1,5 @@
+id,should_trigger,prompt,notes
+export-01,true,"Use $godot-export-release to export the Windows Desktop preset to build/game.exe and list any missing prerequisites.",explicit release task
+export-02,true,"Prepare a Web export for release, inspect the preset, and call out target-specific risks before claiming success.",explicit export workflow
+export-03,false,"Rename the MainMenu root node to TitleScreen and update references.",scene refactor
+export-04,false,"Diagnose this null instance crash in combat_manager.gd.",bug triage

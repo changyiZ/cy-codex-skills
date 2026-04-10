@@ -1,0 +1,5 @@
+id,should_trigger,prompt,notes
+feature-01,true,"Use $godot-feature-impl to add a dash mechanic to the player and verify it with project commands.",explicit feature work
+feature-02,true,"Add a pause menu and resume flow to this Godot project while following existing scene structure.",ui and gameplay extension
+feature-03,false,"Fix this missing node path error after moving the HUD scene.",bug triage
+feature-04,false,"Export the Web preset to build/web/index.html.zip and list release risks.",export workflow

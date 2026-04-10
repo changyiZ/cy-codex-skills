@@ -1,0 +1,14 @@
+id: game0226-bug-node-path-regression
+skill: godot-bug-triage
+workspace: /Users/cY/dev/godot/game0226
+mode: mutating
+summary: Diagnose and minimally repair a missing node-path regression caused by an earlier HUD or label rename.
+prompt: Fix a missing node path regression in game0226 after an earlier HUD-related rename or move, keep the fix minimal, and verify it with project commands.
+validation_commands:
+  - make smoke
+  - make export-web
+  - make web-smoke
+expected_surfaces:
+  - scenes/main.tscn
+  - scripts/main.gd
+  - AGENTS.md

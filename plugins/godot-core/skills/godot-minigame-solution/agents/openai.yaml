@@ -1,0 +1,4 @@
+interface:
+  display_name: "Godot Minigame Solution"
+  short_description: "Route Godot WeChat/Douyin mini-game workflows."
+  default_prompt: "Use $godot-minigame-solution to route this Godot mini-game task, keep the repo on thin wrappers around addons/minigame_solution, and choose the right WeChat or Douyin workflow."

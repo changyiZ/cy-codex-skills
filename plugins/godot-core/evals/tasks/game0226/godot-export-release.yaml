@@ -1,0 +1,16 @@
+id: game0226-export-web-release-audit
+skill: godot-export-release
+workspace: /Users/cY/dev/godot/game0226
+mode: mutating
+summary: Audit the Web preset, export path, and release prerequisites before claiming the build is ready.
+prompt: Use godot-export-release to validate the Web preset in game0226, check release prerequisites, export to build/web/index.html, and report residual release risks without overstating success.
+validation_commands:
+  - make export-web-check
+  - make export-web
+  - make web-smoke
+  - make browser-smoke
+expected_surfaces:
+  - export_presets.cfg
+  - Makefile
+  - tools/export_release_check.py
+  - build/web/index.html

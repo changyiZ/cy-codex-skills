@@ -1,0 +1,6 @@
+interface:
+  display_name: "Godot Export Release"
+  short_description: "Preset-driven export and release workflow for Godot"
+  default_prompt: "Use $godot-export-release to verify a Godot export preset, run the export path, and report release risks without overstating success."
+policy:
+  allow_implicit_invocation: false

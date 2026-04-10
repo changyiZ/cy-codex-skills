@@ -1,0 +1,4 @@
+interface:
+  display_name: "Godot Douyin Mini-Game"
+  short_description: "Operate and debug the Godot Douyin exporter and runtime path."
+  default_prompt: "Use $godot-douyin-minigame to work on the Godot 4.6 Douyin mini-game route, keep exporter fixes in the overlay and backend boundary, and validate with smoke plus host evidence."

@@ -1,0 +1,87 @@
+Godot Core Plugin Medium Context
+Last verified: 2026-04-10
+
+Use this file after `llms.txt` when you need plugin-specific workflow defaults, routing boundaries, or a compact implementation guide.
+
+## Source-of-truth rules
+
+1. OpenAI official Codex documentation defines how this plugin should be packaged and how skills should be authored and evaluated.
+2. Godot official stable documentation and class reference define supported engine behavior.
+3. Official Godot tutorials and `godot-demo-projects` provide pattern examples.
+4. Project-pinned engine versions override the generic `Godot 4.6.1-stable` baseline.
+5. Pixi `llms` pages inspired the document layering only. They do not define Godot facts.
+
+## Plugin skills and boundaries
+
+### `godot-bug-triage`
+- Use for runtime errors, scene-loading regressions, export failures, null-instance bugs, and missing resource or node-path incidents.
+- Do not use for ordinary feature requests or planned refactors.
+- Bias toward smallest-fix diagnosis and explicit verification steps.
+
+### `godot-feature-impl`
+- Use for ordinary gameplay, UI, and systems implementation in an existing Godot project.
+- Do not use for primarily structural scene refactors or release/export execution.
+- Prefer extending existing project patterns over introducing a new architecture.
+
+### `godot-scene-refactor`
+- Use only when the task explicitly changes node names, node paths, scene file paths, scene ownership, signal wiring, or autoload-facing structure.
+- This skill is explicit-only.
+- Mandatory workflow: inspect target scenes, search the whole repo for references, update references, and list likely regressions.
+
+### `godot-export-release`
+- Use only when the task explicitly asks to export, prepare a release, or diagnose export-specific failure.
+- This skill is explicit-only.
+- Mandatory workflow: verify preset, verify output path and missing credentials, run the export path that exists, inspect logs, and state unresolved release risks.
+
+### `godot-core`
+- Use for broad Godot implementation, bug fixing, architecture review, or performance diagnosis when a narrower specialist skill is not clearly the best fit.
+- Do not use when the primary task is already clearly scene refactor, export/release, Web export, or Web CJK font repair.
+- Treat it as the umbrella workflow and routing layer for general Godot work.
+
+### `godot-web-export`
+- Use for Godot HTML5 or Web export, hosting checks, browser compatibility, CDN or cache issues, and Web startup failures.
+- Do not use for generic desktop export work or non-Web gameplay implementation.
+- Carry forward the stable-doc compatibility note that Godot 4 Web export does not support C# projects.
+
+### `godot-web-cjk-font-fix`
+- Use for Godot Web Chinese, Japanese, and Korean font rendering failures such as tofu boxes, missing glyphs, or oversized embedded fonts.
+- Do not use for general typography design or non-Web export work.
+- Keep the workflow focused on bundled fonts, subsetting, payload size, and Web regression checks.
+
+### `godot-minigame-solution`
+- Use for shared WeChat/Douyin mini-game adoption, refresh, validation routing, portable bundle installation, or upstream-monitoring work.
+- Do not use for ordinary Godot feature work with no mini-game surface.
+- Treat it as the router for the platform specialist skills and as the owner of the bundled installer and upgrade monitor.
+
+### `godot-wechat-minigame`
+- Use for WeChat mini-game export, DevTools or device validation, shell and bridge issues, input incidents, or WeChat-specific runtime triage.
+- Do not use for Douyin-specific export or launcher problems.
+- Keep fixes in the shell, bridge, exporter, or backend layer unless gameplay evidence proves otherwise.
+
+### `godot-douyin-minigame`
+- Use for Douyin mini-game exporter setup, overlay sync, Developer Tools or device validation, runtime probe issues, or Douyin-specific launcher/subpackage incidents.
+- Do not use for WeChat shell and bridge problems.
+- Keep fixes in the exporter, overlay, runtime probe, or backend layer unless gameplay evidence proves otherwise.
+
+## GDScript-first compatibility posture
+
+- The plugin is authored for Godot 4.6.x with GDScript as the primary implementation language.
+- C# and GDExtension are in scope only as compatibility notes and validation constraints.
+- Important compatibility fact: Godot 4 Web export does not support C# projects according to the stable `Exporting for the Web` documentation.
+
+## Validation defaults
+
+1. Prefer project-specific import, smoke, test, and export commands when present.
+2. If the project does not expose a quality gate, state that gap explicitly rather than pretending verification happened.
+3. For scene or export work, list likely regressions even after validation passes.
+4. The current maintained local general-Godot validation workspace is `/Users/cY/dev/godot/game0226`, which exposes `make smoke`, `make export-web`, and `make web-smoke`.
+5. The mini-game-specialist workflows are additionally backed by `/Users/cY/dev/godot/game0330` and `/Users/cY/dev/godot/game0213`.
+6. Route replay artifacts may be marked `pass-timeout` when the correct skill boundary is visible before the full `codex exec` turn completes.
+
+## Plugin-level docs
+
+- `docs/reference-policy.md`: exact source precedence
+- `docs/architecture-principles.md`: authoring and distribution principles
+- `docs/pattern-cases.md`: official tutorial and demo-derived cases
+- `evals/README.md`: routing and workflow evaluation notes
+- `README.md`: install notes, consolidation status, and skill inventory

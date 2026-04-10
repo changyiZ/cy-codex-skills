@@ -1,0 +1,4 @@
+interface:
+  display_name: "Godot WeChat Mini-Game"
+  short_description: "Operate and debug the Godot Web-to-WeChat mini-game route."
+  default_prompt: "Use $godot-wechat-minigame to work on the Godot 4.6 WeChat mini-game route, keep wx-specific logic inside the WeChat shell and backend boundary, and validate with smoke plus host evidence."

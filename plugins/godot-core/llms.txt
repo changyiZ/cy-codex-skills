@@ -1,0 +1,53 @@
+Godot Core Plugin
+Last verified: 2026-04-10
+
+Primary sources:
+- OpenAI Codex plugins build docs: https://developers.openai.com/codex/plugins/build
+- OpenAI Codex customization / skills: https://developers.openai.com/codex/concepts/customization/#skills
+- OpenAI Codex MCP guidance: https://developers.openai.com/codex/concepts/customization/#mcp
+- OpenAI Codex skills best practices: https://developers.openai.com/codex/skills/#best-practices
+- Godot stable docs root: https://docs.godotengine.org/en/stable/
+- Godot stable download archive: https://godotengine.org/download/archive/
+- Godot official demo projects: https://github.com/godotengine/godot-demo-projects
+
+Identity
+- Plugin name: godot-core
+- Plugin version: 0.2.0
+- Default engine baseline: Godot 4.6.1-stable
+- Scope: reusable Codex workflows for Godot engineering, export, Web delivery, Web CJK troubleshooting, and WeChat/Douyin mini-game adaptation
+
+Source policy
+- Use OpenAI official Codex docs for plugin packaging, skill design, and evaluation shape.
+- Use Godot stable docs and class reference for engine and export facts.
+- Use Godot official tutorials and demo projects for pattern examples.
+- Use Pixi llms pages only as document-structure inspiration.
+- Treat local godot-* skills as heuristics until revalidated.
+
+Plugin skills
+- godot-bug-triage: diagnose errors and propose the smallest defensible fix
+- godot-feature-impl: implement ordinary Godot gameplay, UI, or systems changes
+- godot-scene-refactor: explicit-only scene tree and reference refactors
+- godot-export-release: explicit-only preset-driven export and release work
+- godot-core: umbrella Godot workflow and compatibility router
+- godot-web-export: Web export, deployment, and browser-runtime specialist
+- godot-web-cjk-font-fix: Web CJK font-rendering specialist
+- godot-minigame-solution: shared WeChat/Douyin mini-game router, installer, and monitor
+- godot-wechat-minigame: WeChat mini-game export and runtime specialist
+- godot-douyin-minigame: Douyin mini-game export and runtime specialist
+
+Project adaptation expectations
+- Keep project-specific constraints in AGENTS.md and project docs.
+- Provide exact import, smoke, test, and export commands when possible.
+- Prefer the project's pinned Godot version over the plugin baseline.
+
+Docs map
+- llms-medium.txt: workflow defaults and routing detail
+- llms-full.txt: fuller context pack
+- docs/reference-policy.md: source precedence
+- docs/architecture-principles.md: plugin design rules
+- docs/pattern-cases.md: official tutorial and demo-derived patterns
+
+Exclusions
+- No packaged MCP in v0.1
+- No bundled app integrations
+- No bundled `godot-mini-game-wechat` project

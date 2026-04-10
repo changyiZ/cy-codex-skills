@@ -1,0 +1,15 @@
+id: game0226-feature-keyboard-shortcuts
+skill: godot-feature-impl
+workspace: /Users/cY/dev/godot/game0226
+mode: mutating
+summary: Add a small, validation-friendly gameplay or UI enhancement without changing scene structure.
+prompt: Use godot-feature-impl to add keyboard shortcuts for new round, undo, clear, and hint in game0226 while preserving tutorial flow and validating with the project commands.
+validation_commands:
+  - make smoke
+  - make export-web
+  - make web-smoke
+  - make browser-smoke
+expected_surfaces:
+  - scripts/main.gd
+  - scenes/main.tscn
+  - project.godot

@@ -1,0 +1,5 @@
+id,should_trigger,prompt,notes
+cjk-01,true,"Use $godot-web-cjk-font-fix to fix Chinese tofu boxes in this Godot Web export and verify the optimized build.",explicit cjk font repair
+cjk-02,true,"Editor text looks correct, but the Web build shows missing CJK glyphs and some symbols are broken. Repair the font pipeline and keep payload size under control.",web glyph and subset issue
+cjk-03,false,"Diagnose COOP and COEP header issues for a threaded Godot Web export.",web export specialist
+cjk-04,false,"Choose a nicer UI font for the desktop build.",not a web cjk repair task
