@@ -1,6 +1,6 @@
 # cy-codex-skills
 
-Mirror of the non-system Codex skills currently loaded from `~/.codex/skills` and synchronized across devices.
+Mirror of the non-system Codex skills currently loaded from `~/.codex/skills`, plus a small set of local terminal config files synchronized across devices.
 
 ## Synced skills
 
@@ -29,6 +29,12 @@ Mirror of the non-system Codex skills currently loaded from `~/.codex/skills` an
 ## Restore on another machine
 
 Clone this repo, then copy or symlink each skill directory into `~/.codex/skills/`, and restart Codex.
+
+For Ghostty, copy `dotfiles/.config/ghostty/config.ghostty` to `~/.config/ghostty/config.ghostty`, then reload Ghostty config or restart the app.
+
+## Synced local configs
+
+- `dotfiles/.config/ghostty/config.ghostty`
 
 ## Excluded skills
 
