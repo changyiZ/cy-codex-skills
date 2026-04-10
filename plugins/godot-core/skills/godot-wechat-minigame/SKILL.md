@@ -24,7 +24,7 @@ description: Implement, validate, or debug the Godot 4.6 WeChat mini-game route 
 1. 先读 `references/solution-overview.md`，确认当前仓是否仍走 repo-owned WeChat shell 路线，以及这条路线的层次边界。
 2. 再读 `references/workflow.md`，确认导出入口、目录归属和稳定产物结构。
 3. 涉及验证时再读 `references/validation.md`。
-4. 涉及点击失效、启动黑屏、包体、资源读取、编辑器插件串入、中文字体等问题时，再读 `references/pitfalls.md`。
+4. 涉及点击失效、启动黑屏、`mainWasm` / wasm 启动、transpile 慢路径、DevTools CLI 卡住、包体、资源读取、编辑器插件串入、中文字体等问题时，再读 `references/pitfalls.md`。
 5. 如果目标仓还没有 `addons/minigame_solution/`、`tools/wechat/` 或 `platform/wechat/`，先回到 `$godot-minigame-solution`，用它自带的安装脚本把完整方案落进目标仓，再继续平台排障。
 
 ## 可移植性规则
@@ -41,15 +41,18 @@ description: Implement, validate, or debug the Godot 4.6 WeChat mini-game route 
 4. 启动时主包必须先显式加载 `engine` 子包，再启动 Godot。
 5. WeChat 验证必须分清：
    - export/smoke
-   - DevTools
-   - 真机
-6. 没有 DevTools 或真机能力时，结论只能停在可用层级，不能把静态验证包装成宿主验证。
+   - DevTools startup/basic interaction
+   - 真机 startup/basic interaction
+   - 可选 remote debug
+6. 对生成后的 `engine/godot.js` 做启动参数 patch 时，调用点和函数签名必须一起改；只改 body/call site 不够。
+7. 没有 DevTools 或真机能力时，结论只能停在可用层级，不能把静态验证包装成宿主验证。
 
 ## 产出要求
 
 1. 说清当前问题是在导出、装配、壳层、桥接、输入、资源、还是验收层。
 2. 说清已跑验证命令和仍缺的验证层级。
-3. 如果修复的是 WeChat 特有问题，明确说明为什么修在壳层/桥接层，而不是 gameplay 层。
+3. 说清当前证据锚定的 artifact 路径和 build stamp，避免把旧导入包和新导出包混在一起。
+4. 如果修复的是 WeChat 特有问题，明确说明为什么修在壳层/桥接层，而不是 gameplay 层。
 
 ## 参考资料
 

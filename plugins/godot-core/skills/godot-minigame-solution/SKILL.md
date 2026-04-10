@@ -67,10 +67,11 @@ description: Route Godot WeChat and Douyin mini-game work through a shared solut
    - `data/minigame_subpackages.json`
    - 项目自己的 `platform/wechat/`、`platform/douyin/`、`autoload/PlatformServices.gd`
 5. 目标仓如果还没有 `export_presets.cfg` 或预设不完整，优先运行 `scripts/ensure_export_presets.py --project-root <target-repo>`，不要再依赖某台机器上的旧预设文件。
-6. 验证必须走三层闭环：
+6. 验证必须先走三层闭环，再把 remote debug 单列为可选第四层：
    - 产物/marker 验证
    - 可执行 probe 验证
-   - 玩家视角手工验收
+   - 玩家视角 startup/basic interaction 与手工验收
+   - 可选 remote debug
 7. 如果只有 export/smoke 通过，没有 DevTools 或真机证据，只能报告“结构验证通过”，不能报告“平台已验证”。
 8. 如果目标仓没有统一命令面，先按仓内实际入口发现并记录，再决定是否补齐 `make export-wechat` / `make export-douyin` 等标准入口。
 9. 周期巡检类任务不要只盯官方文档；必须把外部方案、依赖版本、和 skill 内置资源漂移一起检查。
@@ -80,7 +81,7 @@ description: Route Godot WeChat and Douyin mini-game work through a shared solut
 1. 说清当前任务属于接入、刷新、验证还是排障。
 2. 说清应该继续读哪个 reference，或应该联动哪个平台 skill。
 3. 说清当前仓库是否仍符合统一方案的薄封装边界。
-4. 验证类任务必须列出已完成层级和仍缺的层级。
+4. 验证类任务必须列出已完成层级和仍缺的层级，并把证据锚定到当前 artifact 路径和 build stamp。
 
 ## 参考资料
 
