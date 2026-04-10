@@ -21,10 +21,11 @@ description: Implement, validate, or debug the Godot 4.6 WeChat mini-game route 
 
 ## 默认工作流
 
-1. 先读 `references/workflow.md`，确认当前仓是否仍走 repo-owned WeChat shell 路线。
-2. 涉及验证时再读 `references/validation.md`。
-3. 涉及点击失效、启动黑屏、包体、资源读取、编辑器插件串入、中文字体等问题时，再读 `references/pitfalls.md`。
-4. 如果目标仓还没有 `addons/minigame_solution/`、`tools/wechat/` 或 `platform/wechat/`，先回到 `$godot-minigame-solution`，用它自带的安装脚本把完整方案落进目标仓，再继续平台排障。
+1. 先读 `references/solution-overview.md`，确认当前仓是否仍走 repo-owned WeChat shell 路线，以及这条路线的层次边界。
+2. 再读 `references/workflow.md`，确认导出入口、目录归属和稳定产物结构。
+3. 涉及验证时再读 `references/validation.md`。
+4. 涉及点击失效、启动黑屏、包体、资源读取、编辑器插件串入、中文字体等问题时，再读 `references/pitfalls.md`。
+5. 如果目标仓还没有 `addons/minigame_solution/`、`tools/wechat/` 或 `platform/wechat/`，先回到 `$godot-minigame-solution`，用它自带的安装脚本把完整方案落进目标仓，再继续平台排障。
 
 ## 可移植性规则
 
@@ -52,6 +53,7 @@ description: Implement, validate, or debug the Godot 4.6 WeChat mini-game route 
 
 ## 参考资料
 
-1. `references/workflow.md`
-2. `references/validation.md`
-3. `references/pitfalls.md`
+1. `references/solution-overview.md`
+2. `references/workflow.md`
+3. `references/validation.md`
+4. `references/pitfalls.md`
