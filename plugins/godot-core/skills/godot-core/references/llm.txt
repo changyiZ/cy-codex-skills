@@ -1,0 +1,51 @@
+# Godot LLM Routing Index
+
+Source-of-truth rules:
+1. Official Godot docs and official demo projects come first.
+2. If community posts conflict with official sources, trust the official sources.
+3. If the repo is pinned to a different Godot version, respect the repo version over generic stable advice.
+4. Use stable docs by default, and use latest docs only for unreleased or recently changed behavior.
+5. Demo projects are for pattern discovery; confirm final API details in the docs or class reference.
+
+## Version Policy
+
+- Stable release baseline: `Godot 4.6.1-stable` -> https://godotengine.org/download/archive/4.6.1-stable/
+- Stable docs root: https://docs.godotengine.org/en/stable/
+- Latest docs root: https://docs.godotengine.org/en/latest/
+- Release policy: https://docs.godotengine.org/en/stable/about/release_policy.html
+
+## Core Concepts
+
+- Step by step index -> https://docs.godotengine.org/en/stable/getting_started/step_by_step/index.html
+- Nodes and Scenes -> https://docs.godotengine.org/en/stable/getting_started/step_by_step/nodes_and_scenes.html
+- Using signals -> https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html
+- Learning new features -> https://docs.godotengine.org/en/stable/getting_started/introduction/learning_new_features.html
+
+## Scripting
+
+- Scripting index -> https://docs.godotengine.org/en/stable/tutorials/scripting/index.html
+- GDScript -> https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html
+- Idle and Physics Processing -> https://docs.godotengine.org/en/stable/tutorials/scripting/idle_and_physics_processing.html
+- C#/.NET -> https://docs.godotengine.org/en/stable/tutorials/scripting/c_sharp/index.html
+
+## Input, Physics, and Resources
+
+- Input handling -> https://docs.godotengine.org/en/stable/tutorials/inputs/index.html
+- Physics -> https://docs.godotengine.org/en/stable/tutorials/physics/index.html
+- Resources -> https://docs.godotengine.org/en/stable/tutorials/scripting/resources.html
+
+## Export and Web
+
+- Export index -> https://docs.godotengine.org/en/stable/tutorials/export/index.html
+- Exporting for the Web -> https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html
+
+## API and Examples
+
+- Class reference -> https://docs.godotengine.org/en/stable/classes/index.html
+- Editor integrated class reference -> https://docs.godotengine.org/en/stable/getting_started/introduction/first_look_at_the_editor.html
+- Official demo projects -> https://github.com/godotengine/godot-demo-projects
+
+## Exclusions
+
+- Do not treat community tutorials or forum answers as the primary API source.
+- Do not use `latest` docs as the default source when stable docs already cover the feature.

@@ -1,0 +1,373 @@
+{
+  "profiles": {
+    "wechat": {
+      "description": "Validate WeChat mini-game runtime API coverage in the assembled artifact.",
+      "checks": [
+        {
+          "id": "wechat.platform-api-probe",
+          "label": "explicit runtime probe APIs",
+          "path": "js/platform-api-probe.js",
+          "apis": [
+            "wx.base64ToArrayBuffer",
+            "wx.getUpdateManager",
+            "wx.showModal",
+            "wx.createCanvas",
+            "wx.createImage",
+            "wx.createInnerAudioContext",
+            "wx.request",
+            "wx.connectSocket"
+          ],
+          "contains": [
+            "wxApi.base64ToArrayBuffer",
+            "wxApi.getUpdateManager",
+            "wxApi.showModal",
+            "wxApi.createCanvas",
+            "wxApi.createImage",
+            "wxApi.createInnerAudioContext",
+            "wxApi.request",
+            "wxApi.connectSocket",
+            "root.godotMinigameProbe"
+          ]
+        },
+        {
+          "id": "wechat.bridge.lifecycle",
+          "label": "bridge lifecycle and launch context APIs",
+          "path": "js/godot-wx-bridge.js",
+          "apis": [
+            "wx.getLaunchOptionsSync",
+            "wx.getEnterOptionsSync",
+            "wx.getSystemInfoSync",
+            "wx.getMenuButtonBoundingClientRect",
+            "wx.onShow",
+            "wx.onHide"
+          ],
+          "contains": [
+            "wx.getLaunchOptionsSync",
+            "wx.getEnterOptionsSync",
+            "wx.getSystemInfoSync",
+            "wx.getMenuButtonBoundingClientRect",
+            "wx.onShow",
+            "wx.onHide"
+          ]
+        },
+        {
+          "id": "wechat.bridge.app-services",
+          "label": "bridge auth, share, subpackage, ads, and vibration APIs",
+          "path": "js/godot-wx-bridge.js",
+          "apis": [
+            "wx.getFileSystemManager",
+            "wx.login",
+            "wx.showShareMenu",
+            "wx.onShareAppMessage",
+            "wx.loadSubpackage",
+            "wx.createRewardedVideoAd",
+            "wx.vibrateShort"
+          ],
+          "contains": [
+            "wx.getFileSystemManager",
+            "wx.login",
+            "wx.showShareMenu",
+            "wx.onShareAppMessage",
+            "wx.loadSubpackage",
+            "wx.createRewardedVideoAd",
+            "wx.vibrateShort"
+          ]
+        },
+        {
+          "id": "wechat.update-manager",
+          "label": "update manager APIs",
+          "path": "js/update-manager.js",
+          "apis": [
+            "wx.getUpdateManager",
+            "wx.showModal"
+          ],
+          "contains": [
+            "wx.getUpdateManager",
+            "wx.showModal"
+          ]
+        },
+        {
+          "id": "wechat.runtime-fs-network",
+          "label": "runtime filesystem and network APIs",
+          "path": "js/fs-sync.js",
+          "apis": [
+            "wx.getSystemInfoSync",
+            "wx.getFileSystemManager",
+            "wx.env.USER_DATA_PATH",
+            "wx.request",
+            "FileSystemManager.readCompressedFile",
+            "FileSystemManager.copyFile"
+          ],
+          "contains": [
+            "wxApi.getSystemInfoSync",
+            "wxApi.getFileSystemManager",
+            "wxApi.env.USER_DATA_PATH",
+            "wxApi.request",
+            "fs.readCompressedFile",
+            "fs.copyFile"
+          ]
+        },
+        {
+          "id": "wechat.subpackage-loader",
+          "label": "subpackage progress APIs",
+          "path": "js/subpackage-loader.js",
+          "apis": [
+            "wx.loadSubpackage",
+            "LoadSubpackageTask.onProgressUpdate"
+          ],
+          "contains": [
+            "wxApi.loadSubpackage",
+            "task.onProgressUpdate"
+          ]
+        },
+        {
+          "id": "wechat.screen-adapter",
+          "label": "window resize and orientation APIs",
+          "path": "plugins/screen-adapter.js",
+          "apis": [
+            "wx.onWindowResize",
+            "wx.onDeviceOrientationChange",
+            "wx.getWindowInfo",
+            "wx.getSystemInfoSync"
+          ],
+          "contains": [
+            "wxApi.onWindowResize",
+            "wxApi.onDeviceOrientationChange",
+            "wxApi.getWindowInfo",
+            "wxApi.getSystemInfoSync"
+          ]
+        },
+        {
+          "id": "wechat.entry-binary",
+          "label": "binary bootstrap APIs",
+          "path": "game.js",
+          "apis": [
+            "wx.base64ToArrayBuffer"
+          ],
+          "contains": [
+            "wx.base64ToArrayBuffer"
+          ]
+        },
+        {
+          "id": "wechat.worker-fs",
+          "label": "worker filesystem APIs",
+          "path": "workers/response/index.js",
+          "apis": [
+            "Worker.getFileSystemManager"
+          ],
+          "contains": [
+            "worker.getFileSystemManager"
+          ]
+        },
+        {
+          "id": "wechat.web-adapter-runtime",
+          "label": "canvas, audio, touch, request, websocket, and storage APIs",
+          "path": "weapp-adapter.js",
+          "apis": [
+            "wx.getSystemInfoSync",
+            "wx.createCanvas",
+            "wx.createImage",
+            "wx.createInnerAudioContext",
+            "wx.onTouchStart",
+            "wx.onTouchMove",
+            "wx.onTouchEnd",
+            "wx.onTouchCancel",
+            "wx.request",
+            "wx.connectSocket",
+            "wx.getStorageSync",
+            "wx.setStorageSync",
+            "wx.removeStorageSync",
+            "wx.clearStorageSync"
+          ],
+          "contains": [
+            "wx.getSystemInfoSync",
+            "wx.createCanvas",
+            "wx.createImage",
+            "wx.createInnerAudioContext",
+            "wx.onTouchStart",
+            "wx.onTouchMove",
+            "wx.onTouchEnd",
+            "wx.onTouchCancel",
+            "wx.request",
+            "wx.connectSocket",
+            "wx.getStorageSync",
+            "wx.setStorageSync",
+            "wx.removeStorageSync",
+            "wx.clearStorageSync"
+          ]
+        }
+      ]
+    },
+    "douyin": {
+      "description": "Validate Douyin mini-game runtime API coverage in the exported artifact.",
+      "checks": [
+        {
+          "id": "douyin.entry.canvas",
+          "label": "entry canvas and screen info APIs",
+          "path": "game.js",
+          "apis": [
+            "tt.getSystemInfoSync",
+            "tt.createCanvas"
+          ],
+          "contains": [
+            "tt.getSystemInfoSync",
+            "tt.createCanvas",
+            "[godot-tt] canvas metrics"
+          ]
+        },
+        {
+          "id": "douyin.platform-api-probe",
+          "label": "explicit runtime probe APIs",
+          "path": "platform-api-probe.js",
+          "apis": [
+            "tt.getEnvInfoSync",
+            "tt.getFileSystemManager",
+            "tt.getStorageSync",
+            "tt.setStorageSync",
+            "tt.removeStorageSync",
+            "tt.getAudioContext",
+            "tt.createBuffer",
+            "tt.getStarkInnerAPI",
+            "tt.request",
+            "tt.connectSocket",
+            "tt.showKeyboard",
+            "tt.hideKeyboard"
+          ],
+          "contains": [
+            "ttApi.getEnvInfoSync",
+            "ttApi.getFileSystemManager",
+            "ttApi.getStorageSync",
+            "ttApi.setStorageSync",
+            "ttApi.removeStorageSync",
+            "ttApi.getAudioContext",
+            "ttApi.createBuffer",
+            "ttApi.getStarkInnerAPI",
+            "ttApi.request",
+            "ttApi.connectSocket",
+            "ttApi.showKeyboard",
+            "ttApi.hideKeyboard",
+            "globalObject.godotMinigameProbe"
+          ]
+        },
+        {
+          "id": "douyin.entry.abort-filter",
+          "label": "entry unhandled rejection filter",
+          "path": "game.js",
+          "apis": [
+            "globalThis.addEventListener",
+            "Promise.catch"
+          ],
+          "contains": [
+            "__godotDouyinAbortFilterInstalled",
+            "unhandledrejection",
+            "launcher start failed"
+          ]
+        },
+        {
+          "id": "douyin.launcher.network",
+          "label": "launcher request and websocket APIs",
+          "path": "godot.launcher.js",
+          "apis": [
+            "tt.request",
+            "tt.connectSocket"
+          ],
+          "contains": [
+            "tt.request",
+            "tt.connectSocket"
+          ]
+        },
+        {
+          "id": "douyin.launcher.storage-fs",
+          "label": "launcher filesystem and storage APIs",
+          "path": "godot.launcher.js",
+          "apis": [
+            "tt.getFileSystemManager",
+            "tt.getStorageSync",
+            "tt.setStorageSync",
+            "tt.removeStorageSync"
+          ],
+          "contains": [
+            "tt.getFileSystemManager",
+            "tt.getStorageSync",
+            "tt.setStorageSync",
+            "tt.removeStorageSync"
+          ]
+        },
+        {
+          "id": "douyin.launcher.keyboard-audio",
+          "label": "launcher keyboard and audio APIs",
+          "path": "godot.launcher.js",
+          "apis": [
+            "tt.showKeyboard",
+            "tt.hideKeyboard",
+            "tt.onKeyboardInput",
+            "tt.onKeyboardConfirm",
+            "tt.onKeyboardComplete",
+            "tt.offKeyboardInput",
+            "tt.offKeyboardConfirm",
+            "tt.offKeyboardComplete",
+            "tt.getAudioContext",
+            "tt.createBuffer"
+          ],
+          "contains": [
+            "tt.showKeyboard",
+            "tt.hideKeyboard",
+            "tt.onKeyboardInput",
+            "tt.onKeyboardConfirm",
+            "tt.onKeyboardComplete",
+            "tt.offKeyboardInput",
+            "tt.offKeyboardConfirm",
+            "tt.offKeyboardComplete",
+            "tt.getAudioContext",
+            "tt.createBuffer"
+          ]
+        },
+        {
+          "id": "douyin.launcher.host-capabilities",
+          "label": "launcher host environment and subpackage APIs",
+          "path": "godot.launcher.js",
+          "apis": [
+            "tt.getEnvInfoSync",
+            "tt.getStarkInnerAPI",
+            "tt.loadSubpackage"
+          ],
+          "contains": [
+            "tt.getEnvInfoSync",
+            "tt.getStarkInnerAPI",
+            "tt.loadSubpackage"
+          ]
+        },
+        {
+          "id": "douyin.engine-runtime-patches",
+          "label": "engine runtime compatibility hooks",
+          "path": "godot/godot.js",
+          "apis": [
+            "TTFS mount hook",
+            "performance.now",
+            "mainWasm override",
+            "preloader override"
+          ],
+          "contains": [
+            "__tt_emscripten_js_libs.getTTFS({FS})",
+            "performance.now()",
+            "mainWasm",
+            "preloaderOverride"
+          ]
+        },
+        {
+          "id": "douyin.engine-exports",
+          "label": "engine export shims",
+          "path": "godot/godot.js",
+          "apis": [
+            "window.Engine",
+            "module.exports"
+          ],
+          "contains": [
+            "window['Engine'] = Engine",
+            "module.exports = Engine"
+          ]
+        }
+      ]
+    }
+  }
+}

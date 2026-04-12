@@ -1,0 +1,5 @@
+id,should_trigger,prompt,notes
+web-01,true,"Use $godot-web-export to diagnose why this Godot HTML5 build works locally but shows a black screen after CDN deploy.",explicit web runtime incident
+web-02,true,"Prepare the Godot Web export for release, verify threads safety, headers, cache policy, and smoke checks before claiming success.",explicit web export workflow
+web-03,false,"Export the Android preset and list signing prerequisites.",non-web export task
+web-04,false,"Reduce Godot mini-game package scope and tighten one-hand input constraints.",mini-game routing

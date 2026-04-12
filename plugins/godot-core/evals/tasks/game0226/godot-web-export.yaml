@@ -1,0 +1,17 @@
+id: game0226-web-export-browser-incident
+skill: godot-web-export
+workspace: /Users/cY/dev/godot/game0226
+mode: mutating
+summary: Diagnose a Web-only startup or deployment incident with both static and browser-level smoke checks.
+prompt: Use godot-web-export to diagnose a game0226 Web build that works in local static hosting but fails in browser startup or after deployment, then verify with both web-smoke and browser-smoke.
+validation_commands:
+  - make export-web-check
+  - make export-web
+  - make web-smoke
+  - make browser-smoke
+expected_surfaces:
+  - export_presets.cfg
+  - build/web/index.html
+  - build/web/index.js
+  - tools/web_smoke_test.sh
+  - tools/browser_smoke_test.cjs

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Godot Scene Refactor"
+  short_description: "Explicit scene renames, moves, and signal rewiring"
+  icon_small: "./assets/godot-scene-refactor-small.svg"
+  icon_large: "./assets/godot-scene-refactor.png"
+  default_prompt: "Use $godot-scene-refactor when the task explicitly asks for a scene rename, move, reparent, or signal reconnect, and update references safely."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,17 @@
+id: game0226-core-architecture-review
+skill: godot-core
+workspace: /Users/cY/dev/godot/game0226
+mode: analysis
+summary: Review the current Godot project structure, coupling points, and validation chain before larger feature work.
+prompt: Use godot-core to review game0226 architecture, identify scene and script coupling around main.gd and the Web validation chain, and propose a staged cleanup plan with explicit validation commands.
+validation_commands:
+  - make smoke
+  - make export-web
+  - make web-smoke
+  - make browser-smoke
+expected_surfaces:
+  - AGENTS.md
+  - Makefile
+  - scenes/main.tscn
+  - scripts/main.gd
+  - tools/web_smoke_test.sh

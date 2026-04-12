@@ -1,0 +1,6 @@
+interface:
+  display_name: "Godot Feature Implementation"
+  short_description: "Scoped Godot feature work with project-aware validation"
+  icon_small: "./assets/godot-feature-impl-small.svg"
+  icon_large: "./assets/godot-feature-impl.png"
+  default_prompt: "Use $godot-feature-impl to add or adjust Godot gameplay, UI, or systems behavior while respecting project constraints and validation commands."

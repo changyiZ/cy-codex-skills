@@ -1,0 +1,165 @@
+{
+  "platforms": {
+    "wechat": {
+      "aliases": [
+        "wx"
+      ],
+      "templates": {
+        "readonly": {
+          "description": "Non-interactive baseline for launch context, storage, login, and shell-local readonly APIs.",
+          "options": {
+            "calls": [
+              "launch_context",
+              "ui_insets",
+              "storage",
+              "login",
+              "vibrate",
+              "base64",
+              "update_manager",
+              "canvas",
+              "image",
+              "audio"
+            ],
+            "allow_ui": false,
+            "timeout_ms": 1500,
+            "temp_path": "user://platform_api_probe.json"
+          },
+          "notes": [
+            "Suitable for cold-start DevTools and real-device smoke when no network or modal UI should appear."
+          ]
+        },
+        "network": {
+          "description": "Validates request and websocket APIs with caller-provided endpoints.",
+          "options": {
+            "calls": [
+              "request",
+              "socket"
+            ],
+            "allow_ui": false,
+            "timeout_ms": 1500,
+            "request_url": "__SET_REQUEST_URL__",
+            "socket_url": "__SET_SOCKET_URL__"
+          },
+          "notes": [
+            "Replace placeholders before use.",
+            "Prefer a dedicated probe endpoint instead of a game backend route."
+          ]
+        },
+        "subpackage": {
+          "description": "Validates deferred pack loading through the shared subpackage contract.",
+          "options": {
+            "calls": [
+              "load_subpackage"
+            ],
+            "allow_ui": false,
+            "timeout_ms": 3000,
+            "subpackage_name": "__SET_SUBPACKAGE_NAME__"
+          },
+          "notes": [
+            "Requires a real subpackage name owned by the target repo."
+          ]
+        },
+        "interactive": {
+          "description": "Validates UI-bearing APIs such as share, rewarded ad, and modal.",
+          "options": {
+            "calls": [
+              "share",
+              "rewarded_ad",
+              "modal"
+            ],
+            "allow_ui": true,
+            "timeout_ms": 1500,
+            "rewarded_placement": "revive",
+            "share_query": "platform_api_probe=1"
+          },
+          "notes": [
+            "Requires a runtime where UI interaction is allowed.",
+            "Rewarded ad will skip when the ad unit id is not configured."
+          ]
+        }
+      }
+    },
+    "douyin": {
+      "aliases": [
+        "tt",
+        "toutiao"
+      ],
+      "templates": {
+        "readonly": {
+          "description": "Non-interactive baseline for launch context, login, storage, and launcher runtime APIs.",
+          "options": {
+            "calls": [
+              "launch_context",
+              "ui_insets",
+              "login",
+              "env_info",
+              "canvas",
+              "file_system",
+              "storage",
+              "audio",
+              "buffer",
+              "stark_api"
+            ],
+            "allow_ui": false,
+            "timeout_ms": 1500
+          },
+          "notes": [
+            "Suitable for initial Developer Tools and real-device bring-up without disruptive UI."
+          ]
+        },
+        "network": {
+          "description": "Validates request and websocket APIs with caller-provided endpoints.",
+          "options": {
+            "calls": [
+              "request",
+              "socket"
+            ],
+            "allow_ui": false,
+            "timeout_ms": 1500,
+            "request_url": "__SET_REQUEST_URL__",
+            "socket_url": "__SET_SOCKET_URL__"
+          },
+          "notes": [
+            "Replace placeholders before use.",
+            "Keep endpoints probe-specific so failures are easy to classify."
+          ]
+        },
+        "subpackage_and_scene": {
+          "description": "Validates subpackage loading and scene reporting through the shared backend contract.",
+          "options": {
+            "calls": [
+              "load_subpackage",
+              "report_scene"
+            ],
+            "allow_ui": false,
+            "timeout_ms": 3000,
+            "subpackage_name": "__SET_SUBPACKAGE_NAME__",
+            "report_scene_id": "__SET_SCENE_ID__"
+          },
+          "notes": [
+            "Requires a real subpackage name and a numeric scene id accepted by the host runtime."
+          ]
+        },
+        "interactive": {
+          "description": "Validates UI-bearing APIs such as share, rewarded ad, interstitial, and keyboard.",
+          "options": {
+            "calls": [
+              "share",
+              "rewarded_ad",
+              "interstitial",
+              "keyboard"
+            ],
+            "allow_ui": true,
+            "timeout_ms": 1500,
+            "rewarded_placement": "revive",
+            "share_query": "platform_api_probe=1"
+          },
+          "notes": [
+            "Requires a runtime where UI interaction is allowed.",
+            "Ad calls will skip when the configured unit ids are absent."
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+id,should_trigger,prompt,notes
+bug-01,true,"Use $godot-bug-triage to diagnose this null instance error in inventory.gd and propose the smallest fix.",explicit bug triage
+bug-02,true,"The project fails to load res://scenes/hud.tscn after a rename. Diagnose the regression and keep the fix minimal.",scene load regression
+bug-03,false,"Implement dash movement for the player and add a cooldown UI.",feature request
+bug-04,false,"Refactor the Player scene hierarchy and reconnect the signals.",scene refactor request

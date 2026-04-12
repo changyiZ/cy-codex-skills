@@ -1,0 +1,8 @@
+{
+  "name": "wechat-export-tools",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "esbuild": "0.27.5"
+  }
+}

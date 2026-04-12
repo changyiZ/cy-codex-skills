@@ -1,0 +1,5 @@
+id,should_trigger,prompt,notes
+scene-01,true,"Use $godot-scene-refactor to rename the Player node to Hero and update all references.",explicit structural change
+scene-02,true,"Move res://scenes/hud.tscn to res://ui/hud.tscn and reconnect any broken references.",scene path move
+scene-03,false,"Implement a charge attack for the player.",ordinary feature work
+scene-04,false,"Fix this export failure caused by a missing preset.",export task

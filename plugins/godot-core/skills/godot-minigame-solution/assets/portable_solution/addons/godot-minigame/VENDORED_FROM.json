@@ -1,0 +1,9 @@
+{
+  "name": "godot-minigame",
+  "repository": "https://github.com/godothub/godot-minigame",
+  "commit": "f6c7291b146d43cb68f812d2b4f003a3d1f9a072",
+  "notes": [
+    "Pinned as the editor/export baseline for the repo-managed WeChat path.",
+    "The current project uses a lightweight local EditorPlugin shim plus repo-local export scripts during migration."
+  ]
+}

@@ -1,0 +1,5 @@
+id,should_trigger,prompt,notes
+core-01,true,"Use $godot-core to review this Godot project architecture, reduce scene coupling, and propose a plan-first refactor with validation commands.",umbrella engineering workflow
+core-02,true,"Implement a save-system cleanup across multiple Godot scenes and scripts, keeping edits minimal and validation explicit.",broad multi-file Godot work
+core-03,false,"Fix Chinese tofu boxes in the Godot Web build and shrink the bundled font payload.",should route to web cjk specialist
+core-04,false,"Diagnose a black screen after deploying the Godot Web export behind a CDN.",should route to web export specialist

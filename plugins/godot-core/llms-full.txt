@@ -1,0 +1,213 @@
+Godot Core Plugin Full Context
+Last verified: 2026-04-10
+
+Primary sources:
+- https://developers.openai.com/codex/plugins/build
+- https://developers.openai.com/codex/concepts/customization/#skills
+- https://developers.openai.com/codex/concepts/customization/#mcp
+- https://developers.openai.com/codex/learn/best-practices/#turn-repeatable-work-into-skills
+- https://developers.openai.com/codex/skills/#best-practices
+- https://docs.godotengine.org/en/stable/
+- https://godotengine.org/download/archive/
+- https://github.com/godotengine/godot-demo-projects
+- https://pixijs.com/llms
+
+## Identity
+
+- Plugin name: `godot-core`
+- Version: `0.2.0`
+- Install root: `/Users/cY/.codex/plugins/godot-core`
+- Marketplace path: `/Users/cY/.agents/plugins/marketplace.json`
+- Default engine baseline: `Godot 4.6.1-stable`
+
+## Why this plugin exists
+
+This plugin packages a small set of repeatable Godot workflows as Codex skills. It follows the OpenAI guidance that skills are the authoring format and plugins are the installable distribution unit. It now covers both general Godot implementation workflows and the bundled WeChat/Douyin mini-game adaptation suite.
+
+## Source policy
+
+1. OpenAI official Codex docs are authoritative for plugin packaging, skill boundaries, MCP boundaries, and evaluation shape.
+2. Godot official stable docs and the class reference are authoritative for engine behavior, export behavior, and platform compatibility.
+3. Official tutorials and `godot-demo-projects` are preferred for pattern examples.
+4. Local `godot-*` skill content can inform workflow defaults, but anything without official support should remain a heuristic or TODO.
+5. Pixi `llms` material influenced the document layering only.
+
+## Plugin skills
+
+### Core workflow skills
+
+### `godot-bug-triage`
+- Purpose: isolate the root cause of Godot failures and push toward the smallest defensible fix.
+- Typical prompts:
+  - null instance errors
+  - failed resource or scene loads
+  - export failures
+  - node-path and signal regressions
+- Non-goals:
+  - large feature work
+  - architecture rewrites
+
+### `godot-feature-impl`
+- Purpose: implement ordinary gameplay, UI, or systems features in an existing Godot project.
+- Typical prompts:
+  - add movement or combat interactions
+  - extend UI flow
+  - add or adjust project systems
+- Non-goals:
+  - release/export execution
+  - structure-heavy scene refactors
+
+### `godot-scene-refactor`
+- Purpose: perform scene-safe structure changes.
+- Explicit-only.
+- Mandatory checks:
+  - inspect affected scenes and attached scripts
+  - search repo-wide references for scene paths, node paths, signals, and autoload assumptions
+  - list likely regressions after changes
+
+### `godot-export-release`
+- Purpose: handle preset-driven export and release preparation.
+- Explicit-only.
+- Mandatory checks:
+  - verify preset and output path
+  - note missing templates or confidential export credentials
+  - inspect export logs
+  - note target-specific residual risks
+
+### Specialized skills
+
+### `godot-core`
+- Purpose: broad Godot umbrella workflow for implementation, debugging, refactor planning, and performance diagnosis when a narrower specialist skill is not obviously the right entrypoint.
+- Typical prompts:
+  - build or refactor a Godot gameplay system
+  - review a Godot project structure before implementation
+  - diagnose performance or architectural coupling in a Godot game
+- Non-goals:
+  - Web-only export diagnosis when `godot-web-export` is a better fit
+
+### `godot-web-export`
+- Purpose: handle Godot Web export, hosting, cache, browser-runtime, and deployment incidents.
+- Typical prompts:
+  - HTML5 export fails or hangs
+  - browser shows black screen after Web deploy
+  - CDN or object-storage host setup breaks runtime assets
+- Non-goals:
+  - generic feature work unrelated to Web delivery
+  - desktop/mobile export tasks without Web-specific failure modes
+
+### `godot-web-cjk-font-fix`
+- Purpose: fix Godot Web Chinese, Japanese, and Korean glyph rendering and payload issues.
+- Typical prompts:
+  - Web build shows tofu boxes or garbled CJK text
+  - bundled font is too large and needs subsetting
+  - editor looks correct but Web output is broken
+- Non-goals:
+  - generic UI typography decisions
+  - non-Web export font issues
+
+### `godot-minigame-solution`
+- Purpose: route shared WeChat and Douyin mini-game work through a bundled adoption, refresh, validation, and monitoring workflow.
+- Typical prompts:
+  - adapt an existing Godot project for WeChat and Douyin mini-games
+  - refresh the bundled mini-game solution in another repo
+  - review whether the mini-game package, wrappers, and validation contract are still current
+- Non-goals:
+  - ordinary feature work unrelated to mini-game export or runtime integration
+
+### `godot-wechat-minigame`
+- Purpose: handle WeChat mini-game export assembly, DevTools or device validation, shell and bridge debugging, and WeChat-specific runtime triage.
+- Typical prompts:
+  - fix a WeChat DevTools startup or input issue
+  - validate the WeChat export route on device
+  - refresh the WeChat shell or bridge path after a shared-solution update
+- Non-goals:
+  - Douyin exporter and launcher issues
+
+### `godot-douyin-minigame`
+- Purpose: handle Douyin exporter setup, overlay sync, Developer Tools or device validation, runtime probe diagnosis, and Douyin-specific launcher/subpackage incidents.
+- Typical prompts:
+  - fix a Douyin export that appears to import an old package
+  - verify the Douyin runtime probe and subpackage path
+  - refresh the Douyin overlay after vendor changes
+- Non-goals:
+  - WeChat shell and bridge issues
+
+## GDScript-first compatibility policy
+
+- GDScript is the default language for implementation guidance.
+- C# and GDExtension remain compatible targets but are not first-class workflow variants in v0.1.
+- Stable Godot docs currently state that Godot 4 Web export does not support C# projects. Treat this as a hard compatibility note in export work.
+
+## Project adaptation expectations
+
+This plugin assumes the target project contributes:
+
+- `AGENTS.md` with commands, constraints, and verification rules
+- docs for architecture, scenes, autoloads, input, and export presets
+- quality gates such as import, smoke, test, or export commands
+
+If that context is missing, the plugin should expose the gap instead of guessing.
+
+## Official pattern cases
+
+The plugin favors patterns grounded in official Godot material:
+
+- Signals for decoupled communication:
+  - `Using signals`
+  - `Instancing with signals`
+  - `Your first 2D game`
+- Scene composition and instancing:
+  - `Nodes and Scenes`
+  - `Creating instances`
+  - `Your first 2D game`
+- Resource and export discipline:
+  - `Resources`
+  - `Exporting projects`
+  - `Exporting for the Web`
+- Broader runnable patterns:
+  - `godot-demo-projects`
+
+See `docs/pattern-cases.md` for the condensed takeaways.
+
+## MCP posture
+
+v0.1 does not ship packaged MCP. This follows OpenAI's guidance that MCP is most useful when a skill needs capabilities outside the local repo. Candidate Godot MCP resources and tools are documented in `mcp/README.md`, but the plugin intentionally leaves `.mcp.json` and server code out until the boundaries stabilize.
+
+## Evaluation posture
+
+The plugin includes prompt sets for the four new core workflow skills and rubric checklists for the two higher-risk skills:
+
+- `evals/prompts/godot-bug-triage.csv`
+- `evals/prompts/godot-feature-impl.csv`
+- `evals/prompts/godot-scene-refactor.csv`
+- `evals/prompts/godot-export-release.csv`
+- `evals/rubrics/scene-refactor.md`
+- `evals/rubrics/export-release.md`
+
+The first evaluation goal is routing stability:
+
+- does the right skill trigger?
+- does the wrong skill stay silent?
+- does the response mention the required workflow?
+
+Active Web specialist skills are also covered by plugin-local routing prompt sets in v0.1, with additional rubric checks for Web export and Web CJK font repair.
+
+The merged mini-game skills are plugin-managed, but they do not yet have plugin-local eval CSVs or rubric files. Their current confidence comes from the durable evidence and cross-project implementation work in `/Users/cY/dev/godot/game0330` and `/Users/cY/dev/godot/game0213`.
+
+The first full real-project validation run uses `/Users/cY/dev/godot/game0226` as the maintained workspace. That project currently provides:
+
+- `make smoke`
+- `make export-web`
+- `make web-smoke`
+- a Web export preset with `variant/thread_support=false`
+- a subsetted Web CJK font asset at `assets/fonts/NotoSansSC-ProjectSubset.woff2`
+
+Route replay artifacts are allowed to finish as `pass-timeout` when the intended skill boundary is already clear from partial `codex exec --json` output.
+
+## Human-facing docs
+
+- `README.md`: install and usage overview
+- `docs/reference-policy.md`: source precedence
+- `docs/architecture-principles.md`: plugin design constraints
+- `docs/pattern-cases.md`: official pattern summaries
+- `docs/llms.md`: how to use the `llms` files

@@ -1,0 +1,13 @@
+id: game0226-scene-status-label-rename
+skill: godot-scene-refactor
+workspace: /Users/cY/dev/godot/game0226
+mode: mutating
+summary: Perform an explicit scene rename and update the corresponding node-path references.
+prompt: Use godot-scene-refactor to rename StatusLabel to MessageLabel in game0226 and update every script or scene reference safely before validating.
+validation_commands:
+  - make smoke
+  - make export-web
+  - make web-smoke
+expected_surfaces:
+  - scenes/main.tscn
+  - scripts/main.gd

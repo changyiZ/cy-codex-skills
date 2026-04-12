@@ -1,0 +1,46 @@
+{
+  "name": "godot-core",
+  "version": "0.2.0",
+  "description": "Research-grounded Codex workflows for Godot 4.6 engineering, Web delivery, and WeChat/Douyin mini-game adaptation.",
+  "author": {
+    "name": "cY",
+    "url": "https://github.com/changyiZ"
+  },
+  "homepage": "https://github.com/changyiZ/cy-codex-skills/tree/main/plugins/godot-core",
+  "repository": "https://github.com/changyiZ/cy-codex-skills",
+  "license": "UNLICENSED",
+  "keywords": [
+    "godot",
+    "game-development",
+    "mini-game",
+    "wechat",
+    "douyin",
+    "codex",
+    "workflows"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Godot Core",
+    "shortDescription": "Godot 4.6 workflows for implementation, Web, and mini-game adaptation",
+    "longDescription": "Research-grounded Codex skills for bug triage, feature delivery, scene-safe refactors, export workflows, Web shipping constraints, Web CJK font repair, and WeChat/Douyin mini-game adaptation.",
+    "developerName": "cY",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/changyiZ/cy-codex-skills/tree/main/plugins/godot-core",
+    "privacyPolicyURL": "https://github.com/changyiZ/cy-codex-skills/blob/main/plugins/godot-core/README.md",
+    "termsOfServiceURL": "https://github.com/changyiZ/cy-codex-skills/blob/main/plugins/godot-core/README.md",
+    "defaultPrompt": [
+      "Use Godot Core to diagnose this Godot runtime error and propose a minimal fix.",
+      "Use Godot Core to prepare this Godot Web export and call out platform-specific risks.",
+      "Use Godot Core to repair CJK glyph failures in this Godot Web build and state the validation steps.",
+      "Use Godot Core to adapt this Godot project for WeChat and Douyin mini-game export and list the validation gates."
+    ],
+    "brandColor": "#478CBF",
+    "composerIcon": "./assets/godot-plugin.svg",
+    "logo": "./assets/godot-core.png",
+    "screenshots": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "vendor_plugin": {
+    "path": "addons/ttsdk.editor/plugin.cfg",
+    "name": "ttsdk.editor",
+    "version": "1.0.3"
+  },
+  "overlay_files": [
+    {
+      "source": "overlay/ttsdk.editor/export_platform.gd",
+      "target": "addons/ttsdk.editor/export_platform.gd"
+    },
+    {
+      "source": "overlay/ttsdk.editor/export_platform_subpackage.gd",
+      "target": "addons/ttsdk.editor/export_platform_subpackage.gd"
+    }
+  ]
+}

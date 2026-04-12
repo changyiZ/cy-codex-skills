@@ -1,0 +1,176 @@
+{
+  "checks": [
+    {
+      "id": "wechat-common-adaptation-overview",
+      "kind": "web_page",
+      "category": "official",
+      "title": "WeChat common adaptation overview",
+      "url": "https://developers.weixin.qq.com/minigame/dev/guide/game-engine/common-adaptation.html"
+    },
+    {
+      "id": "wechat-common-adaptation-quickstart",
+      "kind": "web_page",
+      "category": "official",
+      "title": "WeChat common adaptation quickstart",
+      "url": "https://developers.weixin.qq.com/minigame/dev/guide/game-engine/common-adaptation/Design/QuickStart.html"
+    },
+    {
+      "id": "wechat-common-adaptation-tech-principle",
+      "kind": "web_page",
+      "category": "official",
+      "title": "WeChat common adaptation tech principle",
+      "url": "https://developers.weixin.qq.com/minigame/dev/guide/game-engine/common-adaptation/Design/TechPrinciple.html"
+    },
+    {
+      "id": "douyin-webgl-overall",
+      "kind": "web_page",
+      "category": "official",
+      "title": "Douyin WebGL overall solution",
+      "url": "https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/guide/game-engine/rd-to-SCgame/open-capacity/sc_webgl_overall"
+    },
+    {
+      "id": "douyin-server-guide",
+      "kind": "web_page",
+      "category": "official",
+      "title": "Douyin self-hosted backend guide",
+      "url": "https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/guide/game-engine/rd-to-SCgame/open-capacity/capability-adaptation/sc_webgl_server_guide"
+    },
+    {
+      "id": "douyin-subpackages",
+      "kind": "web_page",
+      "category": "official",
+      "title": "Douyin code package and subpackage guide",
+      "url": "https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/guide/basic-function/subpackages/introduction"
+    },
+    {
+      "id": "douyin-engine-selection",
+      "kind": "web_page",
+      "category": "official",
+      "title": "Douyin engine selection suggestion",
+      "url": "https://developer.open-douyin.com/docs/resource/zh-CN/mini-game/develop/guide/game-engine/rd-to-SCgame/unity-game-access/install-connect/access-engine-advice/sc_engine_selection_suggestion"
+    },
+    {
+      "id": "godot-minigame-repo",
+      "kind": "github_repo",
+      "category": "external",
+      "title": "godot-minigame baseline repo",
+      "repo": "godothub/godot-minigame",
+      "pinned_commit_file": "assets/portable_solution/addons/godot-minigame/VENDORED_FROM.json",
+      "pinned_commit_field": "commit"
+    },
+    {
+      "id": "godot-engine-release",
+      "kind": "github_release",
+      "category": "external",
+      "title": "Godot engine release line",
+      "repo": "godotengine/godot",
+      "current_version": "4.6"
+    },
+    {
+      "id": "wechat-esbuild",
+      "kind": "npm_package",
+      "category": "dependency",
+      "title": "esbuild used by the WeChat transpile step",
+      "package": "esbuild",
+      "current_version_file": "assets/project_template/tools/wechat/package.json",
+      "current_version_path": [
+        "dependencies",
+        "esbuild"
+      ]
+    },
+    {
+      "id": "bundle-minigame-solution-sync",
+      "kind": "local_tree_compare",
+      "category": "resource",
+      "title": "Bundled minigame_solution addon stays synced to the implementation repo",
+      "left": "assets/portable_solution/addons/minigame_solution",
+      "right": "{source_repo}/addons/minigame_solution",
+      "ignore_relpaths": [
+        "douyin/scripts/export.py",
+        "wechat/scripts/assemble_wechat.py",
+        "wechat/template/game.js",
+        "wechat/template/js/godot-wx-bridge.js"
+      ]
+    },
+    {
+      "id": "bundle-godot-minigame-sync",
+      "kind": "local_tree_compare",
+      "category": "resource",
+      "title": "Bundled godot-minigame baseline stays synced to the implementation repo",
+      "left": "assets/portable_solution/addons/godot-minigame",
+      "right": "{source_repo}/addons/godot-minigame"
+    },
+    {
+      "id": "bundle-ttsdk-sync",
+      "kind": "local_tree_compare",
+      "category": "resource",
+      "title": "Bundled ttsdk runtime stays synced to the implementation repo",
+      "left": "assets/portable_solution/addons/ttsdk",
+      "right": "{source_repo}/addons/ttsdk"
+    },
+    {
+      "id": "bundle-ttsdk-editor-sync",
+      "kind": "local_tree_compare",
+      "category": "resource",
+      "title": "Bundled ttsdk.editor exporter stays synced to the implementation repo",
+      "left": "assets/portable_solution/addons/ttsdk.editor",
+      "right": "{source_repo}/addons/ttsdk.editor"
+    },
+    {
+      "id": "bundle-project-template-sync",
+      "kind": "local_file_group_compare",
+      "category": "resource",
+      "title": "Bundled project template core files stay synced to the implementation repo",
+      "pairs": [
+        {
+          "left": "assets/project_template/autoload/PlatformServices.gd",
+          "right": "{source_repo}/autoload/PlatformServices.gd"
+        },
+        {
+          "left": "assets/project_template/autoload/TTBridge.gd",
+          "right": "{source_repo}/autoload/TTBridge.gd"
+        },
+        {
+          "left": "assets/project_template/platform/PlatformBackend.gd",
+          "right": "{source_repo}/platform/PlatformBackend.gd"
+        },
+        {
+          "left": "assets/project_template/platform/AsyncResult.gd",
+          "right": "{source_repo}/platform/AsyncResult.gd"
+        },
+        {
+          "left": "assets/project_template/platform/douyin/DouyinPlatformBackend.gd",
+          "right": "{source_repo}/platform/douyin/DouyinPlatformBackend.gd"
+        },
+        {
+          "left": "assets/project_template/scripts/core/VariantTruth.gd",
+          "right": "{source_repo}/scripts/core/VariantTruth.gd"
+        },
+        {
+          "left": "assets/project_template/tools/wechat/export_wechat.sh",
+          "right": "{source_repo}/tools/wechat/export_wechat.sh"
+        },
+        {
+          "left": "assets/project_template/tools/wechat/smoke_test.sh",
+          "right": "{source_repo}/tools/wechat/smoke_test.sh"
+        },
+        {
+          "left": "assets/project_template/tools/wechat/package.json",
+          "right": "{source_repo}/tools/wechat/package.json"
+        },
+        {
+          "left": "assets/project_template/tools/wechat/package-lock.json",
+          "right": "{source_repo}/tools/wechat/package-lock.json"
+        },
+        {
+          "left": "assets/project_template/tools/douyin/export.sh",
+          "right": "{source_repo}/tools/douyin/export.sh"
+        },
+        {
+          "left": "assets/project_template/tools/douyin_smoke_test.sh",
+          "right": "{source_repo}/tools/douyin_smoke_test.sh"
+        }
+      ]
+    }
+  ]
+}

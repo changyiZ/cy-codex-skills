@@ -1,0 +1,9 @@
+{
+  "name": "ttsdk.editor",
+  "vendor": "bytedance",
+  "plugin_version": "1.0.3",
+  "notes": [
+    "Current repo baseline uses the vendored official exporter under addons/ttsdk.editor.",
+    "Compatibility fixes now live as overlay files under addons/minigame_solution/douyin/overlay/ttsdk.editor and should be synced before export."
+  ]
+}

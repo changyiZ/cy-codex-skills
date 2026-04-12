@@ -1,0 +1,20 @@
+{
+  "name": "cy-codex-skills",
+  "interface": {
+    "displayName": "cY Codex Skills"
+  },
+  "plugins": [
+    {
+      "name": "godot-core",
+      "source": {
+        "source": "local",
+        "path": "./plugins/godot-core"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
