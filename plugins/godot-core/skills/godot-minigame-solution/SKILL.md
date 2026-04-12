@@ -1,6 +1,9 @@
 ---
 name: godot-minigame-solution
 description: Route Godot WeChat and Douyin mini-game work through a shared solution workflow covering adoption, refresh, validation, upstream monitoring, and platform-specific triage. Use when a Godot project needs the reusable mini-game package installed or updated, when a repo should keep thin wrappers around `addons/minigame_solution/`, when Codex must check latest official or external solution drift and dependency updates, or when Codex must decide whether to load the WeChat or Douyin mini-game workflow for validation and debugging.
+short_description: Route Godot WeChat/Douyin mini-game workflows.
+icon_small: ./assets/godot-minigame-solution-small.svg
+icon_large: ./assets/godot-minigame-solution.png
 ---
 
 # Godot Minigame Solution

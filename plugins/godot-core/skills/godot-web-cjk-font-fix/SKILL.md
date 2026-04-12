@@ -1,6 +1,9 @@
 ---
 name: godot-web-cjk-font-fix
 description: Fix Godot 4 Web Chinese, Japanese, and Korean glyph failures with packaged fonts, subsetting, payload optimization, and explicit Web regression checks. Use when editor text is correct but Web output shows tofu boxes, missing glyphs, garbled symbols, or oversized bundled fonts.
+short_description: Godot Web CJK glyph repair and font-size control
+icon_small: ./assets/godot-web-cjk-font-fix-small.svg
+icon_large: ./assets/godot-web-cjk-font-fix.png
 ---
 
 # Godot Web CJK Font Fix

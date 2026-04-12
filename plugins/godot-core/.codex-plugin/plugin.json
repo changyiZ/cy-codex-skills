@@ -38,6 +38,9 @@
       "Use Godot Core to repair CJK glyph failures in this Godot Web build and state the validation steps.",
       "Use Godot Core to adapt this Godot project for WeChat and Douyin mini-game export and list the validation gates."
     ],
-    "brandColor": "#0F766E"
+    "brandColor": "#478CBF",
+    "composerIcon": "./assets/godot-plugin.svg",
+    "logo": "./assets/godot-core.png",
+    "screenshots": []
   }
 }

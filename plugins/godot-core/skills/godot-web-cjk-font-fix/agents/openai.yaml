@@ -1,6 +1,8 @@
 interface:
   display_name: "Godot Web CJK Font Fix"
   short_description: "Godot Web CJK glyph repair and font-size control"
+  icon_small: "./assets/godot-web-cjk-font-fix-small.svg"
+  icon_large: "./assets/godot-web-cjk-font-fix.png"
   default_prompt: "Use $godot-web-cjk-font-fix to repair Godot Web CJK glyph failures, verify the subsetted export, and report payload impact."
 dependencies:
   tools:

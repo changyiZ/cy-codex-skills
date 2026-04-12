@@ -1,6 +1,8 @@
 interface:
   display_name: "Godot Core"
   short_description: "Plan-first Godot engineering with explicit validation"
+  icon_small: "./assets/godot-core-small.svg"
+  icon_large: "./assets/godot-core.png"
   default_prompt: "Use $godot-core to implement or refactor Godot systems with official-doc routing, a short plan, and explicit validation commands."
 dependencies:
   tools:

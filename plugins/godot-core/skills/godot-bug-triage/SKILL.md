@@ -1,6 +1,9 @@
 ---
 name: godot-bug-triage
 description: Diagnose Godot runtime, scene-loading, editor, or export failures and drive toward the smallest defensible fix. Use when the task is driven by an error, regression, crash, null instance, missing node path, failed load, or export failure, including breakage caused by an earlier rename or move. Do not use for ordinary feature requests or planned refactors.
+short_description: Minimal-fix diagnosis for Godot failures
+icon_small: ./assets/godot-bug-triage-small.svg
+icon_large: ./assets/godot-bug-triage.png
 ---
 
 # Godot Bug Triage

@@ -1,6 +1,9 @@
 ---
 name: godot-web-export
 description: Handle Godot Web export, deployment, and runtime diagnosis with explicit thread, header, cache, and smoke-check gates. Use for HTML5 export, CDN or object-storage deployment, custom shell issues, WebView adaptation, or browser black-screen and startup failures. Do not use for generic desktop/mobile export or non-Web feature work.
+short_description: Godot Web export and black-screen deployment triage
+icon_small: ./assets/godot-web-export-small.svg
+icon_large: ./assets/godot-web-export.png
 ---
 
 # Godot Web Export

@@ -1,6 +1,9 @@
 ---
 name: godot-core
 description: Plan-first Godot engineering for feature implementation, bug fixing, architecture review, and performance diagnosis with official-doc routing and explicit validation. Use for day-to-day Godot project work when the task is not primarily a scene-interface refactor, preset-driven release/export task, Web deployment incident, or Web CJK font failure.
+short_description: Plan-first Godot engineering with explicit validation
+icon_small: ./assets/godot-core-small.svg
+icon_large: ./assets/godot-core.png
 ---
 
 # Godot Core

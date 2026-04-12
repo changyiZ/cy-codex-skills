@@ -1,6 +1,9 @@
 ---
 name: godot-export-release
 description: Execute or diagnose a Godot preset-driven export and release workflow. Use only when the task explicitly asks to export, prepare a release, or debug an export-specific failure. Do not use for ordinary feature work or scene refactors.
+short_description: Preset-driven export and release workflow for Godot
+icon_small: ./assets/godot-export-release-small.svg
+icon_large: ./assets/godot-export-release.png
 ---
 
 # Godot Export Release

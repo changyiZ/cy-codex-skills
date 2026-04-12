@@ -1,6 +1,9 @@
 ---
 name: godot-wechat-minigame
 description: Implement, validate, or debug the Godot 4.6 WeChat mini-game route built on Web export, a repo-owned shell, JS bridges, and engine-subpackage assembly. Use when Codex needs the WeChat export flow, WeChat DevTools or device validation, or WeChat-specific runtime triage such as input, wasm startup, packaged assets, or editor-only addon stripping.
+short_description: Operate and debug the Godot Web-to-WeChat mini-game route.
+icon_small: ./assets/godot-wechat-minigame-small.svg
+icon_large: ./assets/godot-wechat-minigame.png
 ---
 
 # Godot WeChat Mini-Game

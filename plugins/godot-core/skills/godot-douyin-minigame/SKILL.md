@@ -1,6 +1,9 @@
 ---
 name: godot-douyin-minigame
 description: Implement, validate, or debug the Godot 4.6 Douyin mini-game route built on the vendored official exporter, repo-owned overlay sync, clean export assembly, and platform-specific runtime validation. Use when Codex needs Douyin export setup, Douyin Developer Tools or device evidence, or Douyin-specific triage for launcher startup, subpackages, runtime probes, or exporter compatibility patches.
+short_description: Operate and debug the Godot Douyin exporter and runtime path.
+icon_small: ./assets/godot-douyin-minigame-small.svg
+icon_large: ./assets/godot-douyin-minigame.png
 ---
 
 # Godot Douyin Mini-Game

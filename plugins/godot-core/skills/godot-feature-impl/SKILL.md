@@ -1,6 +1,9 @@
 ---
 name: godot-feature-impl
 description: Implement ordinary Godot gameplay, UI, or systems work inside an existing project while respecting project constraints and validation commands. Use for normal feature delivery, behavior changes, and scoped extensions. Do not use for primarily structural scene refactors or export-and-release tasks.
+short_description: Scoped Godot feature work with project-aware validation
+icon_small: ./assets/godot-feature-impl-small.svg
+icon_large: ./assets/godot-feature-impl.png
 ---
 
 # Godot Feature Implementation

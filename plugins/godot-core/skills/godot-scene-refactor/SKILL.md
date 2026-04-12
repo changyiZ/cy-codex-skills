@@ -1,6 +1,9 @@
 ---
 name: godot-scene-refactor
 description: Safely refactor a Godot scene tree or scene path while preserving references. Use only when the user explicitly asks to rename, move, reparent, or reconnect scene structure. Do not use for ordinary gameplay code changes or for regressions that should start as bug triage.
+short_description: Explicit scene renames, moves, and signal rewiring
+icon_small: ./assets/godot-scene-refactor-small.svg
+icon_large: ./assets/godot-scene-refactor.png
 ---
 
 # Godot Scene Refactor

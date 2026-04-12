@@ -1,0 +1,6 @@
+interface:
+  display_name: "Godot Core"
+  short_description: "Godot 4.6 workflows for implementation, Web, and mini-game adaptation"
+  icon_small: "./assets/godot-plugin.svg"
+  icon_large: "./assets/godot-core.png"
+  default_prompt: "Use Godot Core to diagnose this Godot task, route it to the right workflow, and keep validation explicit."

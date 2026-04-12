@@ -1,7 +1,7 @@
 # Assets
 
-Last verified: 2026-03-30
+Last verified: 2026-04-12
 
-This plugin intentionally ships without branded visual assets in v0.1.
+This plugin now ships a Godot-flavored icon family for the plugin card and bundled skills.
 
-The manifest leaves publisher and visual metadata as TODO placeholders until real icon, logo, screenshot, and legal review material are ready.
+The SVGs wrap the official Godot icon inside a custom badge so the plugin keeps Godot recognition without reusing the official icon as the plugin's standalone brand mark.

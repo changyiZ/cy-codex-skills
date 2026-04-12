@@ -1,6 +1,8 @@
 interface:
   display_name: "Godot Web Export"
   short_description: "Godot Web export and black-screen deployment triage"
+  icon_small: "./assets/godot-web-export-small.svg"
+  icon_large: "./assets/godot-web-export.png"
   default_prompt: "Use $godot-web-export to diagnose a Godot HTML5 deploy issue, verify thread and header requirements, and report exact smoke checks."
 dependencies:
   tools:
